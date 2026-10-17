@@ -14,22 +14,40 @@ script = ExtResource("1_415bp")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=565960300]
 texture = ExtResource("1_lup26")
 
-[node name="Titulo" type="RichTextLabel" parent="Sprite2D" unique_id=1612512166]
-offset_left = -579.9993
-offset_top = -1759.9996
-offset_right = 1420.0007
-offset_bottom = -1459.9996
+[node name="Organizacao" type="RichTextLabel" parent="Sprite2D" unique_id=1612512166]
+offset_left = -580.0
+offset_top = -1770.0
+offset_right = 1420.0
+offset_bottom = -1470.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 200
 text = "asdasdasdasdasdasd"
 
+[node name="Representante" type="RichTextLabel" parent="Sprite2D" unique_id=1024032398]
+offset_left = -570.0
+offset_top = -1460.0
+offset_right = 1430.0
+offset_bottom = -1160.0
+theme_override_colors/default_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
+theme_override_font_sizes/normal_font_size = 130
+text = "asdasdasdasdasdasd"
+
+[node name="REQ" type="RichTextLabel" parent="Sprite2D" unique_id=529258805]
+offset_left = -550.0
+offset_top = -1040.0
+offset_right = 1450.0
+offset_bottom = -740.0
+theme_override_colors/default_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "asdasdasdasdasdasd"
+
 [node name="Descricao" type="RichTextLabel" parent="Sprite2D" unique_id=1424666728]
-offset_left = -1119.9999
-offset_top = -860.0
-offset_right = 1180.0001
-offset_bottom = 1140.0
+offset_left = -1220.0
+offset_top = -700.0
+offset_right = 1280.0
+offset_bottom = 1300.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 180
+theme_override_font_sizes/normal_font_size = 150
 text = "asdasdasdasdasdasdsdsasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdasdasdasdadsasdasdasd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=999190304]

@@ -7,19 +7,24 @@
 radius = 11.500679
 
 [node name="8_ball" type="Area2D" unique_id=300774040]
+position = Vector2(1, 1)
 script = ExtResource("1_3vpcg")
-metadata/_edit_group_ = true
 
 [node name="8ball" type="Sprite2D" parent="." unique_id=772138949]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_60j1f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
+<<<<<<< HEAD
 position = Vector2(0, -2)
 scale = Vector2(8.035104, 8)
+=======
+scale = Vector2(8, 8)
+>>>>>>> f247b391d117cdb2a7db88b27dc336426f55d800
 shape = SubResource("CircleShape2D_penyb")
 debug_color = Color(0.29165423, 0.39936596, 0.4169704, 0.41960785)
 
+<<<<<<< HEAD
 [node name="Control" type="Control" parent="." unique_id=1269769663]
 layout_mode = 3
 anchors_preset = 0
@@ -37,6 +42,16 @@ offset_top = 17.0
 offset_right = 99.0
 offset_bottom = 47.0
 mouse_filter = 2
+=======
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=544353625]
+
+[node name="Total" type="RichTextLabel" parent="CanvasLayer" unique_id=1475790173]
+modulate = Color(0.6624982, 0.061719775, 0.31887785, 1)
+anchors_preset = -1
+offset_right = 1.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+>>>>>>> f247b391d117cdb2a7db88b27dc336426f55d800
 text = "X SIM
 "
 horizontal_alignment = 1
@@ -56,5 +71,26 @@ text = "Y NÃO
 horizontal_alignment = 1
 vertical_alignment = 1
 language = "pt_BR"
+
+[node name="NumSim" type="RichTextLabel" parent="CanvasLayer" unique_id=62627047]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "X SIM"
+metadata/_edit_use_anchors_ = true
+
+[node name="NumNao" type="RichTextLabel" parent="CanvasLayer" unique_id=1211244428]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Y NÃO"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
