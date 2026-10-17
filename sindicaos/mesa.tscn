@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c4cvury310mbg"]
+
+[ext_resource type="Script" uid="uid://bfdpdedvrujkq" path="res://mesa.gd" id="1_0rx7m"]
+
+[node name="Mesa" type="Node2D" unique_id=2007541273]
+script = ExtResource("1_0rx7m")
+
+[node name="Superfície" type="Sprite2D" parent="." unique_id=1421903899]
