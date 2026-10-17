@@ -1,5 +1,7 @@
 extends Area2D
 
+var screensize = Vector2(1152, 648)
+
 var propostas_mitologicas = [
 	{
 		"imagem":"res://Assets/2D Assets/Papers/Carta vampiro.png",
@@ -9,12 +11,20 @@ var propostas_mitologicas = [
 		"nao": "Os estoques hospitalares são preservados, mas os vampiros passam a buscar fontes alternativas de alimentação, causando preocupação entre os cidadãos."
 	},
 	{
-		"imagem":"res://Assets/2D Assets/Papers/scroll.png",
-		"titulo":"Imposto de cachorros",
-		"descricao": "Queremos mais petiscos.",
-		"sim": "Os cachorros ficam felizes.",
-		"nao": "Os cachorros ficam tristes."
-	}	
+		"imagem": "res://Assets/2D Assets/Papers/Carta botoi.png",
+		"titulo":"Imposto de botos",
+		"descricao": "Lorem ipsum",
+		"sim": "Botos são legais.",
+		"nao": "Botos são demais."
+	},
+	{
+		"imagem": "res://Assets/2D Assets/Papers/Carta iara.png",
+		"titulo":"Imposto de sereias",
+		"descricao": "Lorem ipsum",
+		"sim": "Sereias são legais.",
+		"nao": "Sereias são demais."
+	},
+			
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -23,20 +33,21 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func criar_proposta(indice: int):
+	position.x = screensize.x/2
+	position.y = screensize.y/2
 	$Sprite2D.texture = load(propostas_mitologicas[indice]["imagem"])
 	$Sprite2D/Titulo.text = propostas_mitologicas[indice]["titulo"]
 	$Sprite2D/Descricao.text = propostas_mitologicas[indice]["descricao"]
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_mouse_entered() -> void:
-	#print("oi")
 	var tween = create_tween()
-	tween.tween_property(self, "rotation", rotation + deg_to_rad(90),1)
+	tween.tween_property(self, "rotation", rotation + deg_to_rad(10),1)
+	tween.tween_property(self, "rotation", rotation + deg_to_rad(10),1)
 	
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:

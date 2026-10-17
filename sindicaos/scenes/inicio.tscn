@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cqyk5gh0ovf1"]
+
+[ext_resource type="Script" uid="uid://d4i54f7uup80x" path="res://scripts/inicio.gd" id="1_i3824"]
+
+[sub_resource type="Gradient" id="Gradient_jgil5"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kramq"]
+gradient = SubResource("Gradient_jgil5")
+width = 1152
+height = 648
+
+[node name="MainMenu" type="Control" unique_id=1927412215]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3824")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=554660208]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_kramq")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=186029843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=239675612]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Novo Jogo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=408612818]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Novo jogo"
+
+[node name="Créditos" type="Label" parent="MarginContainer/VBoxContainer" unique_id=50542858]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Créditos"
+
+[node name="Sair" type="Label" parent="MarginContainer/VBoxContainer" unique_id=88585837]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Sair"
