@@ -1,11 +1,33 @@
 [gd_scene format=4 uid="uid://cf1err6j3lpq2"]
 
-[ext_resource type="Texture2D" uid="uid://dqyci7jrka14r" path="res://Assets/3D assets/Carimbo Frames/0004.png" id="1_hbxaj"]
-[ext_resource type="Texture2D" uid="uid://u67c1p7qofkw" path="res://Assets/3D assets/Carimbo Frames/0008.png" id="2_isq0x"]
-[ext_resource type="Texture2D" uid="uid://cu57q5gea8db5" path="res://Assets/3D assets/Carimbo Frames/0013.png" id="3_na6f5"]
-[ext_resource type="Texture2D" uid="uid://dgbxo4emfpugx" path="res://Assets/3D assets/Carimbo Frames/0018.png" id="4_cm8wr"]
-[ext_resource type="Texture2D" uid="uid://bepslxh3gy1il" path="res://Assets/3D assets/Carimbo Frames/0024.png" id="5_ojd51"]
-[ext_resource type="Texture2D" uid="uid://b2stoykycdb5m" path="res://Assets/3D assets/Carimbo Frames/0025.png" id="6_k0yee"]
+[ext_resource type="Texture2D" uid="uid://cb3cy6wtir6xx" path="res://Assets/3D assets/Carimbo Frames/0007.png" id="1_bgy6o"]
+[ext_resource type="Texture2D" uid="uid://dl0ad37xigk6f" path="res://Assets/3D assets/Carimbo Frames/0008.png" id="2_isq0x"]
+[ext_resource type="Texture2D" uid="uid://bh087q5iovfl0" path="res://Assets/3D assets/Carimbo Frames/0013.png" id="3_na6f5"]
+[ext_resource type="Texture2D" uid="uid://pdqgcyqc66ds" path="res://Assets/3D assets/Carimbo Frames/0009.png" id="3_qh5ac"]
+[ext_resource type="Texture2D" uid="uid://ewj38rw0s5y3" path="res://Assets/3D assets/Carimbo Frames/0010.png" id="4_1wkkc"]
+[ext_resource type="Texture2D" uid="uid://nh70dqnqorh4" path="res://Assets/3D assets/Carimbo Frames/0018.png" id="4_cm8wr"]
+[ext_resource type="Texture2D" uid="uid://cr1rubdybbtc1" path="res://Assets/3D assets/Carimbo Frames/0011.png" id="5_2y15y"]
+[ext_resource type="Texture2D" uid="uid://bnwj3v76nvqb8" path="res://Assets/3D assets/Carimbo Frames/0024.png" id="5_ojd51"]
+[ext_resource type="Texture2D" uid="uid://b6eongqv3478i" path="res://Assets/3D assets/Carimbo Frames/0012.png" id="6_bxt0s"]
+[ext_resource type="Texture2D" uid="uid://i0wxi5ob40h5" path="res://Assets/3D assets/Carimbo Frames/0025.png" id="6_k0yee"]
+[ext_resource type="Texture2D" uid="uid://b8fylphrape5w" path="res://Assets/3D assets/Carimbo Frames/0014.png" id="8_hcd53"]
+[ext_resource type="Texture2D" uid="uid://cmppxx516p5by" path="res://Assets/3D assets/Carimbo Frames/0015.png" id="9_cuvkp"]
+[ext_resource type="Texture2D" uid="uid://c2edw6b4tvs70" path="res://Assets/3D assets/Carimbo Frames/0016.png" id="10_g30y6"]
+[ext_resource type="Texture2D" uid="uid://d2tt30gse2xec" path="res://Assets/3D assets/Carimbo Frames/0017.png" id="11_ugpxe"]
+[ext_resource type="Texture2D" uid="uid://bbtki3qdvd6gk" path="res://Assets/3D assets/Carimbo Frames/0019.png" id="13_35oxe"]
+[ext_resource type="Texture2D" uid="uid://bqpbxmpkqhvmg" path="res://Assets/3D assets/Carimbo Frames/0020.png" id="14_5f2ec"]
+[ext_resource type="Texture2D" uid="uid://dok1rvsltn43s" path="res://Assets/3D assets/Carimbo Frames/0021.png" id="15_fy3cg"]
+[ext_resource type="Texture2D" uid="uid://fyrd1vabf3x7" path="res://Assets/3D assets/Carimbo Frames/0022.png" id="16_171if"]
+[ext_resource type="Texture2D" uid="uid://7e5342r50b41" path="res://Assets/3D assets/Carimbo Frames/0023.png" id="17_uc104"]
+[ext_resource type="Texture2D" uid="uid://bu1xlm2co5m1d" path="res://Assets/3D assets/Carimbo Frames/0026.png" id="20_1r80y"]
+[ext_resource type="Texture2D" uid="uid://ctyl01rttqorc" path="res://Assets/3D assets/Carimbo Frames/0027.png" id="21_yxwlo"]
+[ext_resource type="Texture2D" uid="uid://0b2ry8g3foat" path="res://Assets/3D assets/Carimbo Frames/0028.png" id="22_lbkql"]
+[ext_resource type="Texture2D" uid="uid://oov84fxdd3v0" path="res://Assets/3D assets/Carimbo Frames/0029.png" id="23_e05y4"]
+[ext_resource type="Texture2D" uid="uid://ca4wusvt7ryeh" path="res://Assets/3D assets/Carimbo Frames/0030.png" id="24_rs4rb"]
+[ext_resource type="Texture2D" uid="uid://dp1x7in61g5mm" path="res://Assets/3D assets/Carimbo Frames/0031.png" id="25_dsvsl"]
+[ext_resource type="Texture2D" uid="uid://ccxs2rv0oe3qi" path="res://Assets/3D assets/Carimbo Frames/0032.png" id="26_unje8"]
+[ext_resource type="Texture2D" uid="uid://emjj3gqv8w8" path="res://Assets/3D assets/Carimbo Frames/0033.png" id="27_2jhgd"]
+[ext_resource type="Texture2D" uid="uid://d0miafcvgo0so" path="res://Assets/3D assets/Carimbo Frames/0034.png" id="28_dkb5j"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x6omi"]
 _surfaces = [{
@@ -62,67 +84,92 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_x6omi")
 
-[sub_resource type="Animation" id="Animation_einlu"]
-resource_name = "Anim_Test"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Carimbo:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(39.339035, 27.097038, -0.03180158), Vector3(0.12386155, 0.87827015, -0.03180158)]
-}
-
-[sub_resource type="Animation" id="Animation_voxl1"]
-resource_name = "Carimbo_"
-length = 6.0666666
-
-[sub_resource type="Animation" id="Animation_avq3l"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Carimbo:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.12386155, 0.87827015, -0.03180158)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_62hah"]
-_data = {
-&"Anim_Test": SubResource("Animation_einlu"),
-&"Carimbo_": SubResource("Animation_voxl1"),
-&"RESET": SubResource("Animation_avq3l")
-}
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_twr1m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_hbxaj")
+"texture": ExtResource("1_bgy6o")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_isq0x")
 }, {
 "duration": 1.0,
+"texture": ExtResource("3_qh5ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1wkkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2y15y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bxt0s")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_na6f5")
 }, {
 "duration": 1.0,
+"texture": ExtResource("8_hcd53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cuvkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g30y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ugpxe")
+}, {
+"duration": 1.0,
 "texture": ExtResource("4_cm8wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_35oxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5f2ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fy3cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_171if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uc104")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_ojd51")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_k0yee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1r80y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yxwlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lbkql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_e05y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_rs4rb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dsvsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_unje8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2jhgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dkb5j")
 }],
 "loop": 1,
 "name": &"carimbar",
@@ -140,12 +187,10 @@ animations = [{
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12386155, 0.87827015, -0.03180158)
 mesh = SubResource("ArrayMesh_avq3l")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=887808830]
-libraries/ = SubResource("AnimationLibrary_62hah")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=624633216]
 position = Vector2(594, 324)
 scale = Vector2(0.6018519, 0.6018519)
 sprite_frames = SubResource("SpriteFrames_twr1m")
 animation = &"carimbar"
-frame_progress = 0.89020413
+frame_progress = 0.81908804
+speed_scale = 5.0
