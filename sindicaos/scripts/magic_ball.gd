@@ -1,4 +1,12 @@
 extends AnimatedSprite2D
 
-var num_sim
-var num_nao
+
+func _ready() -> void:
+	sorteio_diario()
+	
+func sorteio_diario():
+	var num_sim = 1
+	var num_nao = 1
+	
+	
+	
