@@ -1,23 +1,66 @@
 [gd_scene format=3 uid="uid://bi0ba8rx16mek"]
 
-[ext_resource type="Script" uid="uid://c3swcm1l2tgpu" path="res://scripts/magic_ball.gd" id="1_slkv5"]
+[ext_resource type="Script" uid="uid://h33lq7pxrgbp" path="res://scripts/magicball.gd" id="1_3vpcg"]
+[ext_resource type="Texture2D" uid="uid://dvxtvewyem0xl" path="res://Assets/3D assets/8Ball/8Ball_Placeholder.png" id="2_60j1f"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3vpcg"]
-animations = [{
-"frames": [],
-"loop": 1,
-"name": &"8Ball_shaking",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]
+radius = 11.500679
 
-[node name="8_ball" type="Node2D" unique_id=1122136407]
+[node name="8_ball" type="Area2D" unique_id=300774040]
+position = Vector2(535, 304)
+script = ExtResource("1_3vpcg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1367088895]
-sprite_frames = SubResource("SpriteFrames_3vpcg")
-animation = &"8Ball_shaking"
-script = ExtResource("1_slkv5")
+[node name="8ball" type="Sprite2D" parent="." unique_id=772138949]
+position = Vector2(1, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_60j1f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
+scale = Vector2(8, 8)
+shape = SubResource("CircleShape2D_penyb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=544353625]
+
+[node name="Total" type="RichTextLabel" parent="CanvasLayer" unique_id=1475790173]
+modulate = Color(0.6624982, 0.061719775, 0.31887785, 1)
+anchors_preset = -1
+anchor_left = -0.018229166
+anchor_top = -0.029320987
+anchor_right = 0.034722224
+anchor_bottom = 0.033950616
+offset_left = 506.0
+offset_top = 264.0
+offset_right = 546.0
+offset_bottom = 304.0
+text = "X SIM
+X NÃO"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NumSim" type="RichTextLabel" parent="CanvasLayer" unique_id=62627047]
+visible = false
+anchors_preset = -1
+anchor_top = 0.0015432099
+anchor_right = 0.009548611
+anchor_bottom = -0.026234567
+offset_left = 510.0
+offset_top = 275.0
+offset_right = 550.0
+offset_bottom = 315.0
+text = "X SIM"
+metadata/_edit_use_anchors_ = true
+
+[node name="NumNao" type="RichTextLabel" parent="CanvasLayer" unique_id=1211244428]
+visible = false
+anchors_preset = -1
+anchor_right = 0.012152778
+anchor_bottom = -0.026234567
+offset_left = 513.0
+offset_top = 301.0
+offset_right = 553.0
+offset_bottom = 341.0
+text = "Y NÃO"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
