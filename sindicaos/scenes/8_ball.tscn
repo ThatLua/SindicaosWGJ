@@ -2,7 +2,22 @@
 
 [ext_resource type="Script" uid="uid://c3swcm1l2tgpu" path="res://scripts/magic_ball.gd" id="1_slkv5"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vpcg"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"8Ball_shaking",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="8_ball" type="Node2D" unique_id=1122136407]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1367088895]
+sprite_frames = SubResource("SpriteFrames_3vpcg")
+animation = &"8Ball_shaking"
 script = ExtResource("1_slkv5")
