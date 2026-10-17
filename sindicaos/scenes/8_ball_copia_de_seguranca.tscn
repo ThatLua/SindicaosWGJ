@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bdohggpg57ugd"]
+
+[ext_resource type="Script" uid="uid://h33lq7pxrgbp" path="res://scripts/magicball.gd" id="1_gwfqp"]
+[ext_resource type="Texture2D" uid="uid://dvxtvewyem0xl" path="res://Assets/3D assets/8Ball/8Ball_Placeholder.png" id="2_uhhmw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]
+radius = 11.500679
+
+[node name="8_ball" type="Area2D" unique_id=300774040]
+position = Vector2(1, 1)
+script = ExtResource("1_gwfqp")
+
+[node name="8ball" type="Sprite2D" parent="." unique_id=772138949]
+position = Vector2(1, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_uhhmw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
+scale = Vector2(8, 8)
+shape = SubResource("CircleShape2D_penyb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=544353625]
+
+[node name="Total" type="RichTextLabel" parent="CanvasLayer" unique_id=1475790173]
+modulate = Color(0.6624982, 0.061719775, 0.31887785, 1)
+anchors_preset = -1
+offset_right = 1.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "X SIM
+X NÃO"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NumSim" type="RichTextLabel" parent="CanvasLayer" unique_id=62627047]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "X SIM"
+metadata/_edit_use_anchors_ = true
+
+[node name="NumNao" type="RichTextLabel" parent="CanvasLayer" unique_id=1211244428]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Y NÃO"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
