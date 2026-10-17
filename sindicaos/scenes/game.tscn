@@ -12,7 +12,7 @@ script = ExtResource("1_uwrxv")
 position = Vector2(963, 535)
 
 [node name="Papers" parent="." unique_id=2084411377 instance=ExtResource("1_80nbo")]
-position = Vector2(966.00006, 566)
+position = Vector2(963, 544)
 
 [node name="8_ball" parent="." unique_id=300774040 instance=ExtResource("3_lnu2h")]
-position = Vector2(407, 871)
+position = Vector2(1609, 523)

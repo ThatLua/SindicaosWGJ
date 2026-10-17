@@ -21,16 +21,25 @@ grow_vertical = 2
 script = ExtResource("1_i3824")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=554660208]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = SubResource("GradientTexture2D_kramq")
-
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=186029843]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_kramq")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=186029843]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -80.5
+offset_right = 90.0
+offset_bottom = 80.5
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
@@ -40,17 +49,22 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Novo Jogo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=408612818]
+[node name="Novo Jogo" type="Button" parent="MarginContainer/VBoxContainer" unique_id=6223930]
 layout_mode = 2
 theme_override_font_sizes/font_size = 37
 text = "Novo jogo"
 
-[node name="Créditos" type="Label" parent="MarginContainer/VBoxContainer" unique_id=50542858]
+[node name="Créditos" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2104977264]
 layout_mode = 2
 theme_override_font_sizes/font_size = 37
 text = "Créditos"
 
-[node name="Sair" type="Label" parent="MarginContainer/VBoxContainer" unique_id=88585837]
+[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1660151950]
 layout_mode = 2
 theme_override_font_sizes/font_size = 37
 text = "Sair"
+
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_gui_input"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
