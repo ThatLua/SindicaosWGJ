@@ -5,10 +5,10 @@ var num_sim
 var num_nao
 var sorteio_realizado
 
-
 func _ready() -> void:
 	sorteio_realizado = false
-	$CanvasLayer/Total.text = str("")
+	$Control/RichTextLabel.text = str("")
+	$Control/RichTextLabel2.text = str("")
 	
 func sorteio_diario():
 	
@@ -17,8 +17,9 @@ func sorteio_diario():
 		num_nao = 1 + sorteio
 		num_sim = 1 + 4 - num_nao
 		shake_8ball() 
-		await get_tree().create_timer(1).timeout
-		$CanvasLayer/Total.text = str(num_sim, " SIM\n", num_nao, " NÃO")
+		await get_tree().create_timer(1.2).timeout
+		$Control/RichTextLabel.text = str(num_sim, " SIM")
+		$Control/RichTextLabel2.text = str(num_nao, " NÃO")
 		print("Sims: ",num_sim)
 		print("Nãos: ",num_nao)
 		print("Total de respostas: ", num_sim + num_nao)
@@ -36,8 +37,10 @@ func shake_8ball ():
 	var rotbola = bola.rotation
 	var tween = create_tween()
 
-	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(18), 0.2)
-	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(-18), 0.2)
+	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(18), 0.15)
+	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(-18), 0.15)
+	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(18), 0.10)
+	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(-18), 0.10)
 	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(18), 0.2)
 	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(-18), 0.2)
 	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(0), 0.2)
