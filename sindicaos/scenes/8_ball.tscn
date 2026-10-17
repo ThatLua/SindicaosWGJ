@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://h33lq7pxrgbp" path="res://scripts/magicball.gd" id="1_60j1f"]
 [ext_resource type="Texture2D" uid="uid://dmgj16iassh61" path="res://Assets/3D assets/8Ball/cobre.png" id="2_3vpcg"]
+[ext_resource type="FontFile" uid="uid://bhd5bth0x6kee" path="res://Assets/Fontes/UI E TITULOS alagard.ttf" id="3_3vpcg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]
 radius = 11.500679
@@ -15,6 +16,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_3vpcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
+visible = false
 position = Vector2(0, -2)
 scale = Vector2(8.035104, 8)
 shape = SubResource("CircleShape2D_penyb")
@@ -30,28 +32,30 @@ offset_bottom = 24.0
 mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1365589011]
-modulate = Color(0.342649, 0.58138406, 0.2648215, 1)
+modulate = Color(0.08235294, 0.36862746, 0.03137255, 1)
 layout_mode = 0
 offset_left = 1.0
 offset_top = 17.0
 offset_right = 99.0
 offset_bottom = 47.0
 mouse_filter = 2
-text = "X SIM
+theme_override_fonts/normal_font = ExtResource("3_3vpcg")
+text = "SIM X
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 language = "pt_BR"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control" unique_id=932292043]
-modulate = Color(0.84475636, 0, 0.069070876, 1)
+modulate = Color(0.5686275, 0.08235294, 0.08235294, 1)
 layout_mode = 0
 offset_left = 1.0
 offset_top = 41.0
 offset_right = 99.0
 offset_bottom = 71.0
 mouse_filter = 2
-text = "Y NÃO
+theme_override_fonts/normal_font = ExtResource("3_3vpcg")
+text = "NÃO Y
 "
 horizontal_alignment = 1
 vertical_alignment = 1
