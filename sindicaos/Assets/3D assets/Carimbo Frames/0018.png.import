@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqyci7jrka14r"
-path="res://.godot/imported/0004.png-0e861fbea64a3bacc994eead46a95c89.ctex"
+uid="uid://dgbxo4emfpugx"
+path="res://.godot/imported/0018.png-50e6ae25e2c9d9bbb1993b83d7f6c388.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2D assets/Carimbo/0004.png"
-dest_files=["res://.godot/imported/0004.png-0e861fbea64a3bacc994eead46a95c89.ctex"]
+source_file="res://Assets/3D assets/Carimbo Frames/0018.png"
+dest_files=["res://.godot/imported/0018.png-50e6ae25e2c9d9bbb1993b83d7f6c388.ctex"]
 
 [params]
 
