@@ -1,5 +1,12 @@
 [gd_scene format=4 uid="uid://cf1err6j3lpq2"]
 
+[ext_resource type="Texture2D" uid="uid://dqyci7jrka14r" path="res://Assets/3D assets/Carimbo Frames/0004.png" id="1_hbxaj"]
+[ext_resource type="Texture2D" uid="uid://u67c1p7qofkw" path="res://Assets/3D assets/Carimbo Frames/0008.png" id="2_isq0x"]
+[ext_resource type="Texture2D" uid="uid://cu57q5gea8db5" path="res://Assets/3D assets/Carimbo Frames/0013.png" id="3_na6f5"]
+[ext_resource type="Texture2D" uid="uid://dgbxo4emfpugx" path="res://Assets/3D assets/Carimbo Frames/0018.png" id="4_cm8wr"]
+[ext_resource type="Texture2D" uid="uid://bepslxh3gy1il" path="res://Assets/3D assets/Carimbo Frames/0024.png" id="5_ojd51"]
+[ext_resource type="Texture2D" uid="uid://b2stoykycdb5m" path="res://Assets/3D assets/Carimbo Frames/0025.png" id="6_k0yee"]
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_x6omi"]
 _surfaces = [{
 "aabb": AABB(-1.714572, -0.064657, 10.766367, 3.429144, 2.86247, 3.6056137),
@@ -70,6 +77,10 @@ tracks/0/keys = {
 "values": [Vector3(39.339035, 27.097038, -0.03180158), Vector3(0.12386155, 0.87827015, -0.03180158)]
 }
 
+[sub_resource type="Animation" id="Animation_voxl1"]
+resource_name = "Carimbo_"
+length = 6.0666666
+
 [sub_resource type="Animation" id="Animation_avq3l"]
 length = 0.001
 tracks/0/type = "value"
@@ -88,8 +99,40 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_62hah"]
 _data = {
 &"Anim_Test": SubResource("Animation_einlu"),
+&"Carimbo_": SubResource("Animation_voxl1"),
 &"RESET": SubResource("Animation_avq3l")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twr1m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hbxaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_isq0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_na6f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cm8wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ojd51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k0yee")
+}],
+"loop": 1,
+"name": &"carimbar",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Carimbo" type="Node2D" unique_id=1195032303]
 
@@ -99,3 +142,10 @@ mesh = SubResource("ArrayMesh_avq3l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=887808830]
 libraries/ = SubResource("AnimationLibrary_62hah")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=624633216]
+position = Vector2(594, 324)
+scale = Vector2(0.6018519, 0.6018519)
+sprite_frames = SubResource("SpriteFrames_twr1m")
+animation = &"carimbar"
+frame_progress = 0.89020413
