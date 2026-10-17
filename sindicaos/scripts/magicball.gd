@@ -9,7 +9,6 @@ var sorteio_realizado
 func _ready() -> void:
 	sorteio_realizado = false
 	$CanvasLayer/Total.text = str("")
-	pass
 	
 func sorteio_diario():
 	
@@ -20,8 +19,6 @@ func sorteio_diario():
 		shake_8ball() 
 		await get_tree().create_timer(1).timeout
 		$CanvasLayer/Total.text = str(num_sim, " SIM\n", num_nao, " NÃO")
-		#$CanvasLayer/NumNao.text = str(num_nao)
-		#$CanvasLayer/NumSim.text = str(num_sim)
 		print("Sims: ",num_sim)
 		print("Nãos: ",num_nao)
 		print("Total de respostas: ", num_sim + num_nao)

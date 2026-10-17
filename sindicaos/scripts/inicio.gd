@@ -1,5 +1,9 @@
 extends Control
 
+@onready var novo_jogo: Label = $"MarginContainer/VBoxContainer/Novo Jogo"
+@onready var créditos: Label = $MarginContainer/VBoxContainer/Créditos
+@onready var sair: Label = $MarginContainer/VBoxContainer/Sair
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
