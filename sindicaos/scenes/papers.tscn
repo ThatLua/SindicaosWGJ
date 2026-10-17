@@ -1,8 +1,41 @@
 [gd_scene format=3 uid="uid://capisi3pnp7ty"]
 
+[ext_resource type="Script" uid="uid://cmw1od64akpk1" path="res://scripts/papers.gd" id="1_415bp"]
 [ext_resource type="Texture2D" uid="uid://bhpvxxrdnb2um" path="res://Assets/2D Assets/Papers/Carta vampiro.png" id="1_lup26"]
 
-[node name="Papers" type="Node2D" unique_id=2084411377]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5i5d"]
+size = Vector2(135.94955, 296.2392)
+
+[node name="Papers" type="Area2D" unique_id=1270649175]
+position = Vector2(590, 324)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_415bp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=565960300]
 texture = ExtResource("1_lup26")
+
+[node name="Titulo" type="RichTextLabel" parent="Sprite2D" unique_id=1612512166]
+offset_left = -579.9993
+offset_top = -1759.9996
+offset_right = 1420.0007
+offset_bottom = -1459.9996
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 200
+text = "asdasdasdasdasdasd"
+
+[node name="Descricao" type="RichTextLabel" parent="Sprite2D" unique_id=1424666728]
+offset_left = -1119.9999
+offset_top = -860.0
+offset_right = 1180.0001
+offset_bottom = 1140.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 180
+text = "asdasdasdasdasdasdsdsasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdasdasdasdadsasdasdasd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=999190304]
+position = Vector2(0.49996185, 1.5001144)
+scale = Vector2(22.692242, 13.51948)
+shape = SubResource("RectangleShape2D_l5i5d")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
