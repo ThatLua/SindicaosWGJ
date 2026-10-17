@@ -8,8 +8,7 @@
 size = Vector2(135.94955, 296.2392)
 
 [node name="Papers" type="Area2D" unique_id=1270649175]
-position = Vector2(590, 324)
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_415bp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=565960300]

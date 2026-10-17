@@ -229,8 +229,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func criar_proposta(indice: int):
-	position.x = screensize.x/2
-	position.y = screensize.y/2
+	position = get_viewport_rect().size / 2
 	$Sprite2D.texture = load(propostas_mitologicas[indice]["imagem"])
 	$Sprite2D/Organizacao.text = propostas_mitologicas[indice]["organizacao"]
 	$Sprite2D/Representante.text = propostas_mitologicas[indice]["representante"]
