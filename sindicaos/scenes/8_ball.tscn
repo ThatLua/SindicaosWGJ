@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi0ba8rx16mek"]
 
 [ext_resource type="Script" uid="uid://h33lq7pxrgbp" path="res://scripts/magicball.gd" id="1_3vpcg"]
-[ext_resource type="Texture2D" uid="uid://dvxtvewyem0xl" path="res://Assets/3D assets/8Ball/8Ball_Placeholder.png" id="2_60j1f"]
+[ext_resource type="Texture2D" uid="uid://dmgj16iassh61" path="res://Assets/3D assets/8Ball/cobre.png" id="2_60j1f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]
 radius = 11.500679
@@ -11,31 +11,50 @@ script = ExtResource("1_3vpcg")
 metadata/_edit_group_ = true
 
 [node name="8ball" type="Sprite2D" parent="." unique_id=772138949]
-position = Vector2(1, 1)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_60j1f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
-position = Vector2(1, 0)
-scale = Vector2(8, 8)
+position = Vector2(0, -2)
+scale = Vector2(8.035104, 8)
 shape = SubResource("CircleShape2D_penyb")
+debug_color = Color(0.29165423, 0.39936596, 0.4169704, 0.41960785)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1338677644]
-process_priority = 1
-follow_viewport_enabled = true
+[node name="Control" type="Control" parent="." unique_id=1269769663]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -50.0
+offset_top = -67.0
+offset_right = 53.0
+offset_bottom = 24.0
+mouse_filter = 2
 
-[node name="Total" type="RichTextLabel" parent="CanvasLayer" unique_id=1475790173]
-modulate = Color(0.70828635, 0.073579036, 0.34181863, 1)
-anchors_preset = -1
-anchor_left = -0.036458332
-anchor_top = -0.09104938
-anchor_right = 0.037326388
-anchor_bottom = 0.026234567
-offset_right = 1.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1365589011]
+modulate = Color(0.342649, 0.58138406, 0.2648215, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 17.0
+offset_right = 99.0
+offset_bottom = 47.0
+mouse_filter = 2
 text = "X SIM
-X NÃO"
+"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+language = "pt_BR"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control" unique_id=932292043]
+modulate = Color(0.84475636, 0, 0.069070876, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 41.0
+offset_right = 99.0
+offset_bottom = 71.0
+mouse_filter = 2
+text = "Y NÃO
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "pt_BR"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
