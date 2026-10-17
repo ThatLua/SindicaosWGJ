@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4cvury310mbg"]
 
 [ext_resource type="Script" uid="uid://bfdpdedvrujkq" path="res://mesa.gd" id="1_0rx7m"]
-[ext_resource type="Texture2D" uid="uid://ba8krkj6x3vqd" path="res://2D assets/wood_2.jpg" id="2_0f5q7"]
+[ext_resource type="Texture2D" uid="uid://ba8krkj6x3vqd" path="res://2D Assets/wood_2.jpg" id="2_0f5q7"]
 
 [node name="Mesa" type="Node2D" unique_id=2007541273]
 script = ExtResource("1_0rx7m")
