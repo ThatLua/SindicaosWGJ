@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://capisi3pnp7ty"]
 
+[ext_resource type="Texture2D" uid="uid://bhpvxxrdnb2um" path="res://2D Assets/Papers/Carta vampiro.png" id="1_x1u3y"]
+
 [node name="Papers" type="Node2D" unique_id=2084411377]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=565960300]
+texture = ExtResource("1_x1u3y")
