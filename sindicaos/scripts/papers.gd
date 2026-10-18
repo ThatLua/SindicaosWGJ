@@ -338,14 +338,15 @@ func reset_carimbo():
 	$TintaCarimboSim.modulate.a = 0.0
 	$TintaCarimboNao.modulate.a = 0.0
 
-func carimbar(car_sim: bool):
+func carimbar(car_sim: bool) -> void:
 	reset_carimbo()
 	$Carimbo.modulate.a = 1.0
 	$Carimbo.animation = "carimbar"
+	$Carimbo.frame = 0
 	$Carimbo.play()
-	if car_sim == true:
-		#await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.2).timeout
+	if car_sim:
 		$TintaCarimboSim.modulate.a = 1.0
-	if car_sim == false:
-		await get_tree().create_timer(0.5).timeout
+	else:
 		$TintaCarimboNao.modulate.a = 1.0
+	await $Carimbo.animation_finished

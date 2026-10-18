@@ -34,12 +34,13 @@ func mostrar_final() -> void:
 		else:
 			nãos += 1
 
-	if sims >= 2:
-		texto_final.text = textos_finais[0]
-	elif sims >= 4:
+	if sims >= 8 and sims > nãos:
 		texto_final.text = textos_finais[1]
-	else:
+	elif nãos >= 8 and nãos > sims:
 		texto_final.text = textos_finais[2]
+	else:
+		texto_final.text = textos_finais[0]
+		
 	print("SIM: ", sims, " | NÃO: ", nãos)
 
 func reiniciar_jogo() -> void:

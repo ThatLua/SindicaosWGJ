@@ -29,11 +29,10 @@ func _on_sim_button_pressed() -> void:
 		$AnimatedSprite2D.animation = 'press_sim'
 		bola.atual_sim -= 1
 		bola.texto_atual()
-		papers.carimbar(true) 
-		await get_tree().create_timer(0.5).timeout
-		papers.registrar_decisao(true)
-		await get_tree().create_timer(0.15).timeout
+		await papers.carimbar(true)
 		$AnimatedSprite2D.animation = 'default'
+		await get_tree().create_timer(0.8).timeout
+		await get_tree().create_timer(0.15).timeout
 		if bola.atual_sim == 0:
 			$AnimatedSprite2D/buttonSim.modulate.a = 0.847
 			if bola.atual_nao == 0 and bola.atual_sim == 0:
@@ -54,11 +53,10 @@ func _on_não_button_pressed() -> void:
 		$AnimatedSprite2D.animation = 'press_nao'
 		bola.atual_nao -= 1
 		bola.texto_atual()
-		papers.carimbar(false) 
-		await get_tree().create_timer(0.5).timeout
-		papers.registrar_decisao(false)
-		await get_tree().create_timer(0.15).timeout
+		await papers.carimbar(false)
 		$AnimatedSprite2D.animation = 'default'
+		await get_tree().create_timer(0.8).timeout
+		await get_tree().create_timer(0.15).timeout
 		if bola.atual_nao == 0:
 			$AnimatedSprite2D/buttonNao.modulate.a = 0.776
 			if bola.atual_nao == 0 and bola.atual_sim == 0:
