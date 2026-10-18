@@ -225,6 +225,30 @@ var numeros_sorteados = []
 var decisoes = []
 var proposta_atual = -1
 
+func registrar_decisao(aceita: bool):
+	var indice_proposta_sorteada = numeros_sorteados[proposta_atual]
+	var resposta = ""
+	var consequencia = ""
+	if aceita :
+		resposta = "Sim"
+		consequencia = propostas_mitologicas[indice_proposta_sorteada].sim
+	else:
+		resposta = "Não."
+		consequencia = propostas_mitologicas[indice_proposta_sorteada].nao
+	var decisao = {
+		"indice_proposta" : indice_proposta_sorteada,
+		"resposta": resposta,
+		"consequencia": consequencia
+	}
+	decisoes.append(decisao)
+
+func resumir_decisoes():
+	for i in decisoes.size():
+		print("Você decidiu ",str(decisoes[i]["resposta"]),".")
+		print(str(decisoes[i]["consequencia"]))
+		
+		#print("Você decidiu ", str(decisaoresposta))
+
 func proxima_proposta():
 	proposta_atual += 1
 	if proposta_atual >= 24:
@@ -238,9 +262,6 @@ func _input(event: InputEvent) -> void:
 
 func sorteio_gameplay():
 	var quantidade_de_propostas = propostas_mitologicas.size()
-	
-	decisoes.resize(quantidade_de_propostas)
-	decisoes.fill(0)
 	
 	for i in range(quantidade_de_propostas):
 		numeros_sorteados.append(i)
@@ -268,6 +289,8 @@ func criar_proposta(indice: int):
 	position.x = get_viewport_rect().size.x / 2
 	position.y = get_viewport_rect().size.y
 	animacao_subida()
+	registrar_decisao(true)
+	resumir_decisoes()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
