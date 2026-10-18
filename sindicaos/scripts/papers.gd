@@ -226,6 +226,7 @@ var decisoes = []
 var proposta_atual = -1
 
 func registrar_decisao(aceita: bool):
+	print("decisao registrada")
 	var indice_proposta_sorteada = numeros_sorteados[proposta_atual]
 	var resposta = ""
 	var consequencia = ""
