@@ -12,8 +12,10 @@ var falas = [
 	"Os astros encerraram a apuração. Não adianta pedir recontagem!"
 ]
 var DiaJogo = 0
+var papers = Node2D
 
 func _ready() -> void:
+	papers = get_tree().current_scene.find_child("Papers", true, false)
 	#posições inicias 
 	$"8ball".position = Vector2(0,0)
 	$CollisionShape2D.position = Vector2(0,-3.7)
@@ -73,12 +75,15 @@ func sorteio_diario():
 
 		await get_tree().create_timer(2.0).timeout #caso a animação esteja acontecendo antes do texto aparecer por completo.
 		position_bola()
+		await get_tree().create_timer(1.5).timeout
+		#papers.
 		
 	else: pass
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			$Control/RichTextLabel3.modulate.a = 0.0
 			print("clicou!")
 			sorteio_diario()
 			sorteio_realizado = true
