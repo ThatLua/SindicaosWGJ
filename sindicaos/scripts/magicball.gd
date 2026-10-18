@@ -13,7 +13,7 @@ var DiaJogo = 0
 var papers: Node2D = null
 var clicavel
 var botoes
-
+var tween_texto_clique: Tween
 
 func _ready() -> void:
 	clicavel = false
@@ -34,6 +34,7 @@ func _ready() -> void:
 	#definir texto do dia
 	DiaJogo = Global.DiaJogo
 	$Speech/Dialogo.text = str(falas[DiaJogo - 1])
+	$DiaAtual/DiaAtual.text = str("Dia ", DiaJogo, " /3")
 	#resetar sorteio
 	sorteio_realizado = false
 	startSorteio()
@@ -57,19 +58,23 @@ func startSorteio():
 	await tween_bola.finished
 	#await get_tree().create_timer(1.0).timeout
 	clicavel = true
+	ChangeTextBall(true)
 
-func _process(delta: float) -> void:
-	if clicavel == true:
-		var tween_texto1 = create_tween()
-		tween_texto1.tween_property($Control/RichTextLabel3, "modulate:a", 1.0, 1.0)
-	else: 
-		var tween_texto1 = create_tween()
-		tween_texto1.tween_property($Control/RichTextLabel3, "modulate:a", 0.0, 0.3)
+func ChangeTextBall(mostrar: bool) -> void:
+	if tween_texto_clique and tween_texto_clique.is_running():
+		tween_texto_clique.kill()
+	tween_texto_clique = create_tween()
+
+	if mostrar:
+		tween_texto_clique.tween_property($Control/RichTextLabel3, "modulate:a", 1.0, 1.0)
+	else:
+		tween_texto_clique.tween_property($Control/RichTextLabel3, "modulate:a", 0.0, 0.3)
 
 func sorteio_diario():
 	
 	if sorteio_realizado == false: 
 		clicavel = false
+		ChangeTextBall(false)
 		await get_tree().create_timer(0.5).timeout
 		sorteio = [0,1,2].pick_random()
 		num_nao = 1 + sorteio
