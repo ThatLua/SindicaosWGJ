@@ -41,7 +41,6 @@ func sorteio_diario():
 		print("Sims: ",atual_sim)
 		print("Nãos: ",atual_nao)
 		print("Total de respostas: ", num_sim + num_nao)
-		
 	else: pass
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

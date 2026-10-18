@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cmw1od64akpk1" path="res://scripts/papers.gd" id="1_415bp"]
 [ext_resource type="Texture2D" uid="uid://bhpvxxrdnb2um" path="res://Assets/2D Assets/Papers/Carta vampiro.png" id="1_lup26"]
-[ext_resource type="FontFile" uid="uid://b1fch058lwems" path="res://Assets/Fontes/PROPOSTAS KumarOne-Regular.ttf" id="3_0qjye"]
+[ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="3_er8xk"]
+[ext_resource type="FontFile" uid="uid://br2l4rfoug72h" path="res://fonts/PROPOSTAS KumarOne-Regular.ttf" id="4_a8l3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5i5d"]
 size = Vector2(135.94955, 296.2392)
@@ -20,7 +21,7 @@ offset_top = -1770.0
 offset_right = 1420.0
 offset_bottom = -1470.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_0qjye")
+theme_override_fonts/normal_font = ExtResource("3_er8xk")
 theme_override_font_sizes/normal_font_size = 180
 text = "Lorem Ipsum
 "
@@ -31,7 +32,7 @@ offset_top = -1460.0
 offset_right = 1430.0
 offset_bottom = -1160.0
 theme_override_colors/default_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
-theme_override_fonts/normal_font = ExtResource("3_0qjye")
+theme_override_fonts/normal_font = ExtResource("3_er8xk")
 theme_override_font_sizes/normal_font_size = 130
 text = "Lorem Ipsum
 "
@@ -42,7 +43,7 @@ offset_top = -1040.0
 offset_right = 1450.0
 offset_bottom = -740.0
 theme_override_colors/default_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
-theme_override_fonts/normal_font = ExtResource("3_0qjye")
+theme_override_fonts/normal_font = ExtResource("3_er8xk")
 theme_override_font_sizes/normal_font_size = 100
 text = "Lorem Ipsum
 "
@@ -53,7 +54,7 @@ offset_top = -700.0
 offset_right = 1280.0
 offset_bottom = 1300.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_0qjye")
+theme_override_fonts/normal_font = ExtResource("4_a8l3r")
 theme_override_font_sizes/normal_font_size = 126
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non egestas quam. Fusce eget tortor vitae risus bibendum semper. "
 
