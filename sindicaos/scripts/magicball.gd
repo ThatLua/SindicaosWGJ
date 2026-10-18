@@ -12,6 +12,8 @@ var BolaVisivel
 func _ready() -> void:
 	DeusaVisivel = false
 	BolaVisivel = false
+	$Deusa.position = Vector2(0, 0)
+	$Luz.position = Vector2(0, 0)
 	sorteio_realizado = false
 	$Control/RichTextLabel.text = str("")
 	$Control/RichTextLabel2.text = str("")

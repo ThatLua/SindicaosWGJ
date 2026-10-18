@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cwshdaiehwk3a"]
+[gd_scene format=3 uid="uid://umi2mo7peo24"]
 
 [ext_resource type="Script" uid="uid://dqfjl7dc7rqa5" path="res://scripts/GameManager.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://c4cvury310mbg" path="res://scenes/mesa.tscn" id="2_lbhrr"]
@@ -57,12 +57,11 @@ z_index = 10
 [node name="Background" type="Node" parent="." unique_id=446817297]
 
 [node name="Mesa" parent="Background" unique_id=2007541273 instance=ExtResource("2_lbhrr")]
-scale = Vector2(0.67, 0.67)
 
 [node name="Bola e Deusa" type="Node" parent="." unique_id=1858270364]
 
 [node name="8_ball" parent="Bola e Deusa" unique_id=300774040 instance=ExtResource("3_lnu2h")]
-scale = Vector2(0.67, 0.67)
+position = Vector2(-160, 6)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=793919449]
 
