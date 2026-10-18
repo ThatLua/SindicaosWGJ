@@ -8,6 +8,8 @@ var atual_sim
 var atual_nao
 
 func _ready() -> void:
+	$Deusa.position = Vector2(0,0)
+	$Luz.position = Vector2(0,0)
 	sorteio_realizado = false
 	$Control/RichTextLabel.text = str("")
 	$Control/RichTextLabel2.text = str("")
