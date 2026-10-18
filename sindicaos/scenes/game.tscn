@@ -27,26 +27,28 @@ scale = Vector2(0.67, 0.67)
 
 [node name="rascunho" type="Sprite2D" parent="CanvasLayer" unique_id=581808578]
 visible = false
-position = Vector2(969.00006, 537)
-scale = Vector2(2.7971206, 2.7971206)
+position = Vector2(649.04065, 360.375)
+scale = Vector2(1.8723824, 1.8723823)
 texture = ExtResource("4_iywne")
 
 [node name="Botões Sim_Não" type="Control" parent="CanvasLayer" unique_id=622961122]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -315.0
+offset_top = -377.0
+offset_right = -275.0
+offset_bottom = -337.0
 script = ExtResource("5_u5sy4")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sim Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=275508638]
 modulate = Color(0.29072705, 0.74153024, 0, 1)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = -1
+anchor_left = 2.925
+anchor_top = 2.5
+anchor_right = 0.7
+anchor_bottom = 1.2
 offset_left = 623.0
 offset_top = 849.0
 offset_right = 906.0
@@ -59,11 +61,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Não Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=714616353]
 modulate = Color(0.9738712, 0.0063262577, 0.16220829, 1)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = -1
+anchor_left = 0.575
+anchor_top = 2.7
+anchor_right = -1.925
+anchor_bottom = 1.15
 offset_left = 939.0
 offset_top = 843.0
 offset_right = 1229.0

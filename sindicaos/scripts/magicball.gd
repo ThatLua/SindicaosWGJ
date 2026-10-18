@@ -1,12 +1,11 @@
 extends Area2D
 
 var sorteio
-var num_sim
-var num_nao
+var num_sim = 0
+var num_nao = 0
 var sorteio_realizado
 var atual_sim
 var atual_nao
-
 
 func _ready() -> void:
 	sorteio_realizado = false
@@ -21,16 +20,15 @@ func sorteio_diario():
 		num_sim = 1 + 4 - num_nao
 		shake_8ball() 
 		await get_tree().create_timer(1.2).timeout
-		
-		$Control/RichTextLabel.text = str("sim ", num_sim)
-		$Control/RichTextLabel2.text = str("não ",num_nao)
-		
-		num_nao = atual_nao
-		num_sim = atual_sim
-		
+		#$Control/RichTextLabel.text = str("sim ", num_sim)
+		#$Control/RichTextLabel2.text = str("não ",num_nao)
+		atual_nao = num_nao 
+		atual_sim = num_sim
+		texto_atual()
 		print("Sims: ",atual_sim)
 		print("Nãos: ",atual_nao)
 		print("Total de respostas: ", num_sim + num_nao)
+		
 	else: pass
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

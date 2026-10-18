@@ -1,8 +1,8 @@
 extends Control
 
 #teste ta tudo dando errado!
-var atual_sim = 0
-var atual_nao = 0
+var atual_sim
+var atual_nao
 var bola: Node2D
 
 func _ready() -> void:
