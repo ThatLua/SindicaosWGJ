@@ -79,9 +79,9 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureButton" type="TextureButton" parent="." unique_id=2097472714]
 layout_mode = 0
 offset_left = 448.0
-offset_top = 866.0
+offset_top = 863.0
 offset_right = 8677.0
-offset_bottom = 4119.0
+offset_bottom = 4116.0
 scale = Vector2(0.04, 0.04)
 texture_normal = ExtResource("4_4xtsl")
 
