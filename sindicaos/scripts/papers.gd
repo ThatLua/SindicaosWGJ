@@ -288,6 +288,8 @@ func iniciar():
 func _ready() -> void:
 	proposta_atual=-1
 	$Sprite2D.modulate.a = 0.0
+	$TintaCarimboSim.modulate.a = 0.0
+	$TintaCarimboNao.modulate.a = 0.0
 	sorteio_gameplay()
 	#iniciar()
 
@@ -301,6 +303,7 @@ func animacao_subida():
 
 func criar_proposta(indice: int):
 	#position = get_viewport_rect().size / 2
+	reset_carimbo()
 	$Sprite2D.texture = load(propostas_mitologicas[indice]["imagem"])
 	$Sprite2D/Organizacao.text = propostas_mitologicas[indice]["organizacao"]
 	$Sprite2D/Representante.text = propostas_mitologicas[indice]["representante"]
@@ -327,3 +330,22 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			print("fui clicado")
+
+func reset_carimbo():
+	$Carimbo.stop()
+	$Carimbo.animation = "default"
+	$Carimbo.frame = 0
+	$TintaCarimboSim.modulate.a = 0.0
+	$TintaCarimboNao.modulate.a = 0.0
+
+func carimbar(car_sim: bool):
+	reset_carimbo()
+	$Carimbo.modulate.a = 1.0
+	$Carimbo.animation = "carimbar"
+	$Carimbo.play()
+	if car_sim == true:
+		#await get_tree().create_timer(0.5).timeout
+		$TintaCarimboSim.modulate.a = 1.0
+	if car_sim == false:
+		await get_tree().create_timer(0.5).timeout
+		$TintaCarimboNao.modulate.a = 1.0

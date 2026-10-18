@@ -49,7 +49,7 @@ func startSorteio():
 	var tween_speechtext = create_tween()
 	tween_speechtext.tween_property($Speech/Dialogo, "modulate:a", 1.0, 2.0)
 	await tween_speechtext.finished
-	await get_tree().create_timer(0.5).timeout
+	#await get_tree().create_timer(0.5).timeout
 	
 	var tween_bola = create_tween()
 	tween_bola.tween_property($"8ball", "modulate:a", 1.0, 0.5)

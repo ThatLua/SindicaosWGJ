@@ -4,9 +4,156 @@
 [ext_resource type="Texture2D" uid="uid://bhpvxxrdnb2um" path="res://Assets/2D Assets/Papers/Carta vampiro.png" id="1_lup26"]
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="3_er8xk"]
 [ext_resource type="FontFile" uid="uid://br2l4rfoug72h" path="res://fonts/PROPOSTAS KumarOne-Regular.ttf" id="4_a8l3r"]
+[ext_resource type="Texture2D" uid="uid://ci1o18u0jxyxd" path="res://Assets/3D assets/carimbo/OK.png" id="5_ads4f"]
+[ext_resource type="Texture2D" uid="uid://coqopbgby0b0n" path="res://Assets/3D assets/Carimbo Frames/0003.png" id="5_ma6e8"]
+[ext_resource type="Texture2D" uid="uid://df3ltcqmypuv2" path="res://Assets/3D assets/carimbo/X.png" id="6_gte00"]
+[ext_resource type="Texture2D" uid="uid://bs44burw2hiwa" path="res://Assets/3D assets/Carimbo Frames/0004.png" id="6_w3gli"]
+[ext_resource type="Texture2D" uid="uid://dxgqbs802spa1" path="res://Assets/3D assets/Carimbo Frames/0005.png" id="7_ads4f"]
+[ext_resource type="Texture2D" uid="uid://cibsla36rvyu0" path="res://Assets/3D assets/Carimbo Frames/0006.png" id="8_gte00"]
+[ext_resource type="Texture2D" uid="uid://27kxqsm6jqlx" path="res://Assets/3D assets/Carimbo Frames/0007.png" id="9_7gm0o"]
+[ext_resource type="Texture2D" uid="uid://djkc6s0xc2eem" path="res://Assets/3D assets/Carimbo Frames/0008.png" id="10_fat84"]
+[ext_resource type="Texture2D" uid="uid://vphpta1wbcor" path="res://Assets/3D assets/Carimbo Frames/0009.png" id="11_widl8"]
+[ext_resource type="Texture2D" uid="uid://dj8ca2r4ufi5r" path="res://Assets/3D assets/Carimbo Frames/0010.png" id="12_4v0kh"]
+[ext_resource type="Texture2D" uid="uid://baaittfs5x2nb" path="res://Assets/3D assets/Carimbo Frames/0011.png" id="13_7d3rs"]
+[ext_resource type="Texture2D" uid="uid://dc6734l2lters" path="res://Assets/3D assets/Carimbo Frames/0012.png" id="14_ai6qu"]
+[ext_resource type="Texture2D" uid="uid://cyu2nekuqxk4n" path="res://Assets/3D assets/Carimbo Frames/0013.png" id="15_bgx8d"]
+[ext_resource type="Texture2D" uid="uid://b0lus6iwridm7" path="res://Assets/3D assets/Carimbo Frames/0014.png" id="16_0b2qm"]
+[ext_resource type="Texture2D" uid="uid://dcijjnn4tlain" path="res://Assets/3D assets/Carimbo Frames/0015.png" id="17_pgng3"]
+[ext_resource type="Texture2D" uid="uid://bg22f1kdfgme3" path="res://Assets/3D assets/Carimbo Frames/0016.png" id="18_tyqvo"]
+[ext_resource type="Texture2D" uid="uid://bjlt0po40ye3b" path="res://Assets/3D assets/Carimbo Frames/0017.png" id="19_3v7mj"]
+[ext_resource type="Texture2D" uid="uid://cymo1uybadekk" path="res://Assets/3D assets/Carimbo Frames/0018.png" id="20_7mkqh"]
+[ext_resource type="Texture2D" uid="uid://b2bqge5b0ftef" path="res://Assets/3D assets/Carimbo Frames/0019.png" id="21_hvhwn"]
+[ext_resource type="Texture2D" uid="uid://coirlinadbdeh" path="res://Assets/3D assets/Carimbo Frames/0020.png" id="22_v0qoo"]
+[ext_resource type="Texture2D" uid="uid://ds77whektd1sb" path="res://Assets/3D assets/Carimbo Frames/0021.png" id="23_wgxlu"]
+[ext_resource type="Texture2D" uid="uid://ey1u5bi4ox84" path="res://Assets/3D assets/Carimbo Frames/0022.png" id="24_cbvpv"]
+[ext_resource type="Texture2D" uid="uid://c4j505nf1xtok" path="res://Assets/3D assets/Carimbo Frames/0023.png" id="25_i1432"]
+[ext_resource type="Texture2D" uid="uid://bqmmhd6v4q7n6" path="res://Assets/3D assets/Carimbo Frames/0024.png" id="26_uy3oh"]
+[ext_resource type="Texture2D" uid="uid://ciqhy0pwh8umu" path="res://Assets/3D assets/Carimbo Frames/0025.png" id="27_85cl2"]
+[ext_resource type="Texture2D" uid="uid://df1vwsj3raqvf" path="res://Assets/3D assets/Carimbo Frames/0026.png" id="28_cti57"]
+[ext_resource type="Texture2D" uid="uid://p6p0p55hmdu4" path="res://Assets/3D assets/Carimbo Frames/0027.png" id="29_2apms"]
+[ext_resource type="Texture2D" uid="uid://dlcv5t12cce7" path="res://Assets/3D assets/Carimbo Frames/0028.png" id="30_jdilh"]
+[ext_resource type="Texture2D" uid="uid://jhcprmlmtue7" path="res://Assets/3D assets/Carimbo Frames/0029.png" id="31_1tyy6"]
+[ext_resource type="Texture2D" uid="uid://dytc7umqsd6j8" path="res://Assets/3D assets/Carimbo Frames/0030.png" id="32_mwfxs"]
+[ext_resource type="Texture2D" uid="uid://8djops84genk" path="res://Assets/3D assets/Carimbo Frames/0031.png" id="33_ysc31"]
+[ext_resource type="Texture2D" uid="uid://b1n61n62r31di" path="res://Assets/3D assets/Carimbo Frames/0032.png" id="34_ugrib"]
+[ext_resource type="Texture2D" uid="uid://0drooyindsil" path="res://Assets/3D assets/Carimbo Frames/0033.png" id="35_ijhdk"]
+[ext_resource type="Texture2D" uid="uid://c2ws4xdglxnv4" path="res://Assets/3D assets/Carimbo Frames/0034.png" id="36_et3y1"]
+[ext_resource type="Texture2D" uid="uid://iojpx38vw0sm" path="res://Assets/3D assets/Carimbo Frames/0002.png" id="37_oasso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5i5d"]
 size = Vector2(135.94955, 296.2392)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_penyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ma6e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w3gli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ads4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gte00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7gm0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fat84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_widl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4v0kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7d3rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ai6qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bgx8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0b2qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pgng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tyqvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3v7mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7mkqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hvhwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_v0qoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wgxlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cbvpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_i1432")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_uy3oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_85cl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cti57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2apms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jdilh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1tyy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_mwfxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ysc31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ugrib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ijhdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_et3y1")
+}],
+"loop": 0,
+"name": &"carimbar",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_oasso")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 25.0
+}]
 
 [node name="Papers" type="Area2D" unique_id=1270649175]
 scale = Vector2(0.2, 0.2)
@@ -64,6 +211,25 @@ visible = false
 position = Vector2(0.49996185, 1.5001144)
 scale = Vector2(22.692242, 13.51948)
 shape = SubResource("RectangleShape2D_l5i5d")
+
+[node name="TintaCarimboSim" type="Sprite2D" parent="." unique_id=1671416702]
+position = Vector2(555.00006, 1150)
+scale = Vector2(3.8679667, 3.8679667)
+texture = ExtResource("5_ads4f")
+
+[node name="TintaCarimboNao" type="Sprite2D" parent="." unique_id=2084130662]
+position = Vector2(595, 1150)
+scale = Vector2(3.8679667, 3.8679667)
+texture = ExtResource("6_gte00")
+
+[node name="Carimbo" type="AnimatedSprite2D" parent="." unique_id=1557769765]
+position = Vector2(540, 945)
+scale = Vector2(3.3564816, 3.3564816)
+sprite_frames = SubResource("SpriteFrames_penyb")
+animation = &"carimbar"
+autoplay = "default"
+frame = 31
+frame_progress = 1.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

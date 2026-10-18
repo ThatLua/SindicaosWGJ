@@ -29,6 +29,8 @@ func _on_sim_button_pressed() -> void:
 		$AnimatedSprite2D.animation = 'press_sim'
 		bola.atual_sim -= 1
 		bola.texto_atual()
+		papers.carimbar(true) 
+		await get_tree().create_timer(0.5).timeout
 		papers.registrar_decisao(true)
 		await get_tree().create_timer(0.15).timeout
 		$AnimatedSprite2D.animation = 'default'
@@ -52,6 +54,8 @@ func _on_não_button_pressed() -> void:
 		$AnimatedSprite2D.animation = 'press_nao'
 		bola.atual_nao -= 1
 		bola.texto_atual()
+		papers.carimbar(false) 
+		await get_tree().create_timer(0.5).timeout
 		papers.registrar_decisao(false)
 		await get_tree().create_timer(0.15).timeout
 		$AnimatedSprite2D.animation = 'default'
@@ -59,6 +63,7 @@ func _on_não_button_pressed() -> void:
 			$AnimatedSprite2D/buttonNao.modulate.a = 0.776
 			if bola.atual_nao == 0 and bola.atual_sim == 0:
 				end_day()
+		await get_tree().create_timer(0.8).timeout
 		papers.proxima_proposta()
 		
 	else: 
