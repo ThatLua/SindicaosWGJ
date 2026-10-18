@@ -13,8 +13,10 @@ var falas = [
 ]
 var DiaJogo = 0
 var papers = Node2D
+var clicavel
 
 func _ready() -> void:
+	clicavel = false
 	papers = get_tree().current_scene.find_child("Papers", true, false)
 	#posições inicias 
 	$"8ball".position = Vector2(0,0)
@@ -51,14 +53,22 @@ func startSorteio():
 	var tween_bola = create_tween()
 	tween_bola.tween_property($"8ball", "modulate:a", 1.0, 0.5)
 	await tween_bola.finished
-	var tween_texto1 = create_tween()
-	tween_texto1.tween_property($Control/RichTextLabel3, "modulate:a", 1.0, 1.5)
 	#await get_tree().create_timer(1.0).timeout
+	clicavel = true
+
+func _process(delta: float) -> void:
+	if clicavel == true:
+		var tween_texto1 = create_tween()
+		tween_texto1.tween_property($Control/RichTextLabel3, "modulate:a", 1.0, 1.0)
+	else: 
+		var tween_texto1 = create_tween()
+		tween_texto1.tween_property($Control/RichTextLabel3, "modulate:a", 0.0, 0.3)
 
 func sorteio_diario():
-	var tween_texto1 = create_tween()
-	tween_texto1.tween_property($Control/RichTextLabel3, "modulate:a", 0.0, 0.5)
+	
 	if sorteio_realizado == false: 
+		clicavel = false
+		await get_tree().create_timer(0.5).timeout
 		sorteio = [0,1,2].pick_random()
 		num_nao = 1 + sorteio
 		num_sim = 1 + 3 - num_nao
@@ -82,8 +92,8 @@ func sorteio_diario():
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			$Control/RichTextLabel3.modulate.a = 0.0
+		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:	
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and clicavel == true:
 			print("clicou!")
 			sorteio_diario()
 			sorteio_realizado = true
