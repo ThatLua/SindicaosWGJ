@@ -6,7 +6,7 @@ var num_nao = 0
 var sorteio_realizado
 var atual_sim
 var atual_nao
-var falas = [	"Os ventos anunciam um dia de grandes oportunidades… e consequências duvidosas…",
+var falas = ["Os ventos anunciam um dia de grandes oportunidades… e consequências duvidosas…",
 	"As Moiras estão generosas hoje! Não se acostume, é um fenômeno raro.",
 	"Os astros encerraram a apuração. Não adianta pedir recontagem!"]
 var DiaJogo = 0
@@ -140,7 +140,7 @@ func StartGame():
 	await tween.finished
 	await get_tree().create_timer(1.5).timeout
 	#começar jogo oficial
-	#papers.
+	#papers.iniciar() 
 	pass
 
 

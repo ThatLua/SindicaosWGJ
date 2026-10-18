@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dt306787om231"]
+
+[ext_resource type="Texture2D" uid="uid://cv3qme3lnkqb1" path="res://Assets/UI/BOTAO.png" id="1_5pifh"]
+[ext_resource type="Script" uid="uid://d1ow0me4gwxo3" path="res://scripts/end_game.gd" id="1_plvne"]
+[ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_0h6i1"]
+[ext_resource type="AudioStream" uid="uid://ds47cmtvrg7y7" path="res://Assets/Som/MúsicaJogo.mp3" id="3_6lcay"]
+[ext_resource type="Texture2D" uid="uid://bwwtt0jgaftdc" path="res://Assets/2D Assets/background/LOGO.png" id="4_plvne"]
+[ext_resource type="Texture2D" uid="uid://bhbxbe7fyo855" path="res://Assets/2D Assets/Papers/folha.png" id="5_0h6i1"]
+[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://Assets/Fontes/Fondamento-Regular.ttf" id="6_6lcay"]
+
+[node name="EndGame" type="Control" unique_id=46833206]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_plvne")
+
+[node name="TextureRect" type="Polygon2D" parent="." unique_id=450588109]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(261.4731, 393.57642)
+scale = Vector2(0.6889518, 0.59886646)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(2462.475, -722.3253, 2462.4749, 1209.6577, -445, 1193, -455, -719)
+
+[node name="ReplayButton" type="Sprite2D" parent="." unique_id=1270907880]
+position = Vector2(924.99994, 930.99994)
+scale = Vector2(0.039900094, 0.03990009)
+texture = ExtResource("1_5pifh")
+
+[node name="Replay" type="Button" parent="ReplayButton" unique_id=1007852456]
+modulate = Color(1, 1, 1, 0)
+offset_left = -4066.668
+offset_top = -1600.0
+offset_right = 4099.999
+offset_bottom = 1633.334
+theme_override_font_sizes/font_size = 37
+action_mode = 0
+
+[node name="ReplayText" type="RichTextLabel" parent="ReplayButton" unique_id=38061143]
+z_index = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8281.168
+offset_top = -3259.834
+offset_right = -47.833984
+offset_bottom = -596.36523
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_0h6i1")
+theme_override_font_sizes/normal_font_size = 1200
+text = "Jogar de novo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=753842381]
+stream = ExtResource("3_6lcay")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=2137063548]
+position = Vector2(267, 155)
+scale = Vector2(0.18649398, 0.18062206)
+texture = ExtResource("4_plvne")
+
+[node name="RelatorioFinal" type="Sprite2D" parent="." unique_id=414618006]
+position = Vector2(930, 436.00003)
+scale = Vector2(0.19154675, 0.19154677)
+texture = ExtResource("5_0h6i1")
+
+[node name="RelatorioFinal" type="RichTextLabel" parent="RelatorioFinal" unique_id=1248493195]
+modulate = Color(0, 0, 0, 1)
+z_index = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3037.77
+offset_top = -3950.9084
+offset_right = -30.670898
+offset_bottom = 1.1293945
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("6_6lcay")
+theme_override_font_sizes/normal_font_size = 130
+text = "Um governo funcional
+RELATÓRIO OFICIAL DE ENCERRAMENTO
+
+Após dias de deliberações, protestos e uma quantidade preocupante de papelada, o governo conseguiu manter certa estabilidade entre as comunidades.
+
+Nem todos conseguiram o que queriam, mas a sociedade está em harmonia e equilíbrio. As instituições seguem funcionando, os conflitos permanecem administráveis e o gabinete recebeu apenas algumas ameaças formais de processo.
+
+Nem todos saíram satisfeitos, mas as comunidades encontraram espaço para coexistir. Um feito inédito, que será devidamente registrado em ata.
+"
+horizontal_alignment = 1
+vertical_alignment = 1

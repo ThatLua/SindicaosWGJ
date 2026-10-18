@@ -55,3 +55,5 @@ func end_day():
 	print("Fim do Ciclo!")
 	bola.DiaJogo +=1
 	print(bola.DiaJogo)
+	#Puxar Relatório
+	#relatorio.inicializar()
