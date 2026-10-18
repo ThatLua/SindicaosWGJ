@@ -20,6 +20,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i3824")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1076347308]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=841227395]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=554660208]
 layout_mode = 1
 anchors_preset = 15
