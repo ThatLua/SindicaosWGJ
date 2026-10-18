@@ -5,6 +5,10 @@
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_sh71o"]
 [ext_resource type="Texture2D" uid="uid://qmmdp31shyag" path="res://Assets/2D Assets/background/Background1.1.png" id="2_x7bp8"]
 [ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://Assets/Fontes/Fondamento-Regular.ttf" id="5_i627k"]
+[ext_resource type="FontFile" uid="uid://bhd5bth0x6kee" path="res://Assets/Fontes/UI E TITULOS alagard.ttf" id="6_x7bp8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgte1"]
+bg_color = Color(0.654902, 0.5803922, 0.5686275, 0)
 
 [node name="Relatorio" type="Node2D" unique_id=711176752]
 script = ExtResource("1_i627k")
@@ -40,3 +44,22 @@ theme_override_fonts/normal_font = ExtResource("5_i627k")
 theme_override_font_sizes/normal_font_size = 110
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non egestas quam. Fusce eget tortor vitae risus bibendum semper. "
 horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Sprite2D" unique_id=1310719378]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2326.0
+offset_top = -2327.0
+offset_right = -1603.0
+offset_bottom = -2027.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("6_x7bp8")
+theme_override_font_sizes/font_size = 140
+theme_override_styles/normal = SubResource("StyleBoxFlat_bgte1")
+text = "Prosseguir"
