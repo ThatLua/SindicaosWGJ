@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://nw0l7cuffvdj" path="res://Assets/3D assets/buttons/Normal.png" id="6_gee14"]
 [ext_resource type="Texture2D" uid="uid://cx5yt2lj78oyl" path="res://Assets/3D assets/buttons/No.png" id="7_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://bby0xyv5vhogn" path="res://Assets/3D assets/buttons/Yes.png" id="8_vtaks"]
+[ext_resource type="Texture2D" uid="uid://b0xth1ysa4x26" path="res://Assets/UI/ENG.png" id="10_vtaks"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_penyb"]
 animations = [{
@@ -121,6 +122,22 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(97, 68)
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Sprite2D" parent="." unique_id=889863990]
+z_index = 10
+position = Vector2(844.99994, -441.00003)
+scale = Vector2(0.03889081, 0.03889081)
+texture = ExtResource("10_vtaks")
+
+[node name="Ajustes" type="Button" parent="Settings" unique_id=2104560259]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1654.8062
+offset_top = -1654.8057
+offset_right = 1654.8057
+offset_bottom = 1637.3867
+theme_override_font_sizes/font_size = 37
+action_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/Botões Sim_Não/Sim Button" to="CanvasLayer/Botões Sim_Não" method="_on_sim_button_pressed"]

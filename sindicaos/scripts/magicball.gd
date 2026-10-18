@@ -6,14 +6,13 @@ var num_nao = 0
 var sorteio_realizado
 var atual_sim
 var atual_nao
-var falas = [
-	"Os ventos anunciam um dia de grandes oportunidades… e consequências duvidosas…",
+var falas = [	"Os ventos anunciam um dia de grandes oportunidades… e consequências duvidosas…",
 	"As Moiras estão generosas hoje! Não se acostume, é um fenômeno raro.",
-	"Os astros encerraram a apuração. Não adianta pedir recontagem!"
-]
+	"Os astros encerraram a apuração. Não adianta pedir recontagem!"]
 var DiaJogo = 0
 var papers = Node2D
 var clicavel
+
 
 func _ready() -> void:
 	clicavel = false
@@ -82,13 +81,8 @@ func sorteio_diario():
 		print("Sims: ",atual_sim)
 		print("Nãos: ",atual_nao)
 		print("Total de respostas: ", num_sim + num_nao)
-
 		await get_tree().create_timer(2.0).timeout #caso a animação esteja acontecendo antes do texto aparecer por completo.
-		position_bola()
-		await get_tree().create_timer(1.5).timeout
-		#papers.
-		
-	else: pass
+		StartGame()
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -130,3 +124,24 @@ func position_bola() -> void:
 	tween.tween_property($"8ball","position",Vector2(1085.6, 271.6),1.0	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	tween.tween_property($CollisionShape2D,"position",Vector2(1085.6, 267.9),1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	tween.tween_property($Control,"position",Vector2(996, 164),1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	
+	#bouncing da bola flutuando se der tempo!
+
+func StartGame():
+	#sumir Deusa e fala
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property($Deusa,"modulate:a",0.0,1.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property($Luz,"modulate:a",0.0,1.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property($Speech,"modulate:a",0.0,1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property($Speech/Dialogo,"modulate:a",0.0,1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	#mover a bola e esperar
+	position_bola()
+	await tween.finished
+	await get_tree().create_timer(1.5).timeout
+	#começar jogo oficial
+	#papers.
+	pass
+
+
+	

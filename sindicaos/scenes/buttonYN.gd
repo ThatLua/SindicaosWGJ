@@ -48,7 +48,7 @@ func _on_não_button_pressed() -> void:
 		esgotado($"Não Button")
 		$AnimatedSprite2D.animation = 'default'
 
-func esgotado(botaoIn: Control) -> void:
+func esgotado(botaoIn: Control) -> void: #essa função é totalmente desnecessária pelo visto mas não vou arrumar na reta final da entrega.
 	pass
 
 func end_day():
