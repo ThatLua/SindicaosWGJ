@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bv5i86bgqjndh"]
+
+[ext_resource type="Script" uid="uid://em3rwugcsm8l" path="res://scripts/cena_explicacoes.gd" id="1_hnjyu"]
+[ext_resource type="Texture2D" uid="uid://cb5grbsd0pxio" path="res://Assets/2D Assets/background/Background1.png" id="1_v2760"]
+[ext_resource type="Texture2D" uid="uid://bhbxbe7fyo855" path="res://Assets/2D Assets/Papers/folha.png" id="3_kjweg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjweg"]
+bg_color = Color(0.654902, 0.5803922, 0.5686275, 0)
+
+[node name="CenaExplicacoes" type="Node2D" unique_id=1575560573]
+script = ExtResource("1_hnjyu")
+
+[node name="Superfície" type="Sprite2D" parent="." unique_id=167766001]
+texture = ExtResource("1_v2760")
+
+[node name="Papel" type="Sprite2D" parent="." unique_id=106259202]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_kjweg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Papel" unique_id=52127974]
+offset_left = -1395.0
+offset_top = -1685.0
+offset_right = 1355.0
+offset_bottom = 1315.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 180
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur mattis purus vehicula suscipit. Etiam varius metus vel pulvinar imperdiet. Sed hendrerit nec nunc sed molestie. Cras nec lorem diam. Nullam rutrum tellus eu lacus efficitur, id finibus mi tincidunt."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Papel" unique_id=2013792175]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2418.0
+offset_top = -2525.0
+offset_right = -1695.0
+offset_bottom = -2225.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 140
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjweg")
+text = "Prosseguir"
