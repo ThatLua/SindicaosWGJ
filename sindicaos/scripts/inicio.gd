@@ -13,6 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _on_novo_jogo_pressed() -> void:
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "modulate:a", 1.0, 1)
