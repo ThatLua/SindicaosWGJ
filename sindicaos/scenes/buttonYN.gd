@@ -7,7 +7,7 @@ var papers: Node2D
 
 func _ready() -> void:
 	bola = get_tree().current_scene.find_child("8_ball", true, false)
-	papers = get_tree().current_scene.find_child("papers", true, false)
+	papers = get_tree().current_scene.find_child("Papers", true, false)
 	
 	$"Sim Button".modulate.a = 0.0
 	$"Não Button".modulate.a = 0.0

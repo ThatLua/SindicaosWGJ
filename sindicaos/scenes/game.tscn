@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dqfjl7dc7rqa5" path="res://scripts/GameManager.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://c4cvury310mbg" path="res://scenes/mesa.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bi0ba8rx16mek" path="res://scenes/8_ball.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://capisi3pnp7ty" path="res://scenes/papers.tscn" id="4_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://btfjkg8lo7nx6" path="res://scenes/rascunho.png" id="4_iywne"]
 [ext_resource type="Script" uid="uid://d1mxbjks1gr8l" path="res://scenes/buttonYN.gd" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://nw0l7cuffvdj" path="res://Assets/3D assets/buttons/Normal.png" id="6_gee14"]
@@ -50,6 +51,8 @@ z_index = 10
 
 [node name="8_ball" parent="Bola e Deusa" unique_id=300774040 instance=ExtResource("3_lnu2h")]
 position = Vector2(-380, 6)
+
+[node name="Papers" parent="." unique_id=1270649175 instance=ExtResource("4_0tnpc")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=793919449]
 
