@@ -5,21 +5,23 @@
 [ext_resource type="PackedScene" uid="uid://bi0ba8rx16mek" path="res://scenes/8_ball.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://btfjkg8lo7nx6" path="res://scenes/rascunho.png" id="4_iywne"]
 [ext_resource type="Texture2D" uid="uid://ctc3b1p01bkn3" path="res://icon.svg" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://d1mxbjks1gr8l" path="res://scenes/buttonYN.gd" id="5_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=1557244102]
 script = ExtResource("1_uwrxv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=846889074]
+z_index = 10
 
 [node name="Background" type="Node" parent="." unique_id=446817297]
 
 [node name="Mesa" parent="Background" unique_id=2007541273 instance=ExtResource("2_lbhrr")]
+scale = Vector2(0.67, 0.67)
 
 [node name="Bola e Deusa" type="Node" parent="." unique_id=1858270364]
 
 [node name="8_ball" parent="Bola e Deusa" unique_id=300774040 instance=ExtResource("3_lnu2h")]
-visible = false
-position = Vector2(0, 0)
+scale = Vector2(0.67, 0.67)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=793919449]
 
@@ -29,32 +31,47 @@ position = Vector2(969.00006, 537)
 scale = Vector2(2.7971206, 2.7971206)
 texture = ExtResource("4_iywne")
 
-[node name="Sim Button" type="Button" parent="CanvasLayer" unique_id=275508638]
-modulate = Color(0.29072705, 0.74153024, 0, 1)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -317.0
-offset_top = 329.0
-offset_right = -34.0
-offset_bottom = 517.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("5_p57ef")
+[node name="Botões Sim_Não" type="Control" parent="CanvasLayer" unique_id=622961122]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_u5sy4")
+metadata/_edit_use_anchors_ = true
 
-[node name="Não Button" type="Button" parent="CanvasLayer" unique_id=714616353]
-modulate = Color(0.9738712, 0.0063262577, 0.16220829, 1)
+[node name="Sim Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=275508638]
+modulate = Color(0.29072705, 0.74153024, 0, 1)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = 323.0
-offset_right = 289.0
-offset_bottom = 521.0
+offset_left = 623.0
+offset_top = 849.0
+offset_right = 906.0
+offset_bottom = 1037.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("5_p57ef")
+metadata/_edit_use_anchors_ = true
+
+[node name="Não Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=714616353]
+modulate = Color(0.9738712, 0.0063262577, 0.16220829, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 939.0
+offset_top = 843.0
+offset_right = 1229.0
+offset_bottom = 1041.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("5_p57ef")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Botões Sim_Não/Sim Button" to="CanvasLayer/Botões Sim_Não" method="_on_sim_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Botões Sim_Não/Não Button" to="CanvasLayer/Botões Sim_Não" method="_on_não_button_pressed"]

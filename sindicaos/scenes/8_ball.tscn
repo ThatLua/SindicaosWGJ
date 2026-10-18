@@ -13,7 +13,6 @@ radius = 11.500679
 blend_mode = 1
 
 [node name="8_ball" type="Area2D" unique_id=300774040]
-position = Vector2(1, 1)
 script = ExtResource("1_60j1f")
 
 [node name="8ball" type="Sprite2D" parent="." unique_id=772138949]

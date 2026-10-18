@@ -53,3 +53,6 @@ func shake_8ball ():
 	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(-18), 0.2)
 	tween.tween_property(bola, "rotation", rotbola + deg_to_rad(0), 0.2)
 	
+func texto_atual() -> void:
+	$Control/RichTextLabel.text = str("sim ", atual_sim)
+	$Control/RichTextLabel2.text = str("não ", atual_nao)
