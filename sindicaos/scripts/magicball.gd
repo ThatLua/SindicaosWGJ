@@ -10,13 +10,15 @@ var falas = ["Os ventos anunciam um dia de grandes oportunidades… e consequên
 	"As Moiras estão generosas hoje! Não se acostume, é um fenômeno raro.",
 	"Os astros encerraram a apuração. Não adianta pedir recontagem!"]
 var DiaJogo = 0
-var papers = Node2D
+var papers: Node2D = null
 var clicavel
+var botoes
 
 
 func _ready() -> void:
 	clicavel = false
 	papers = get_tree().current_scene.find_child("Papers", true, false)
+	botoes = get_tree().current_scene.find_child("Botões Sim_Não", true, false)
 	#posições inicias 
 	$"8ball".position = Vector2(0,0)
 	$CollisionShape2D.position = Vector2(0,-3.7)
@@ -138,10 +140,16 @@ func StartGame():
 	#mover a bola e esperar
 	position_bola()
 	await tween.finished
-	await get_tree().create_timer(1.5).timeout
+	#await get_tree().create_timer(0.5).timeout
 	#começar jogo oficial
-	#papers.iniciar() 
+	#papers.animacao_subida()
+	if is_instance_valid(papers):
+		papers.iniciar()
+	else:
+		push_error("Papers não encontrado na cena!")
+	if is_instance_valid(botoes):
+		botoes.botao_visivel()
 	pass
-
+	
 
 	

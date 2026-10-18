@@ -60,6 +60,7 @@ theme_override_font_sizes/normal_font_size = 126
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non egestas quam. Fusce eget tortor vitae risus bibendum semper. "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=999190304]
+visible = false
 position = Vector2(0.49996185, 1.5001144)
 scale = Vector2(22.692242, 13.51948)
 shape = SubResource("RectangleShape2D_l5i5d")

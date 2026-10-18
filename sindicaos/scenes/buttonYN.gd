@@ -6,6 +6,7 @@ var bola: Node2D
 var papers: Node2D
 
 func _ready() -> void:
+	$".".modulate.a = 0.0
 	bola = get_tree().current_scene.find_child("8_ball", true, false)
 	papers = get_tree().current_scene.find_child("Papers", true, false)
 	
@@ -17,7 +18,14 @@ func _ready() -> void:
 	print("Papers encontrados:", papers)
 	
 func _on_sim_button_pressed() -> void:
+	if not is_instance_valid(bola) or not is_instance_valid(papers):
+			push_error("Bola ou Papers não encontrados!")
+			return
+
 	if bola.atual_sim > 0:
+		if not papers.registrar_decisao(true):
+			return
+			
 		$AnimatedSprite2D.animation = 'press_sim'
 		bola.atual_sim -= 1
 		bola.texto_atual()
@@ -28,12 +36,19 @@ func _on_sim_button_pressed() -> void:
 			$AnimatedSprite2D/buttonSim.modulate.a = 0.847
 			if bola.atual_nao == 0 and bola.atual_sim == 0:
 				end_day()
+		papers.proxima_proposta()
+		
 	else: 
 		esgotado($"Sim Button")
 		$AnimatedSprite2D.animation = 'default'
 
 func _on_não_button_pressed() -> void:
+	if not is_instance_valid(bola) or not is_instance_valid(papers):
+		push_error("Bola ou Papers não encontrados!")
+		return
 	if bola.atual_nao > 0:
+		if not papers.registrar_decisao(false):
+			return
 		$AnimatedSprite2D.animation = 'press_nao'
 		bola.atual_nao -= 1
 		bola.texto_atual()
@@ -44,6 +59,8 @@ func _on_não_button_pressed() -> void:
 			$AnimatedSprite2D/buttonNao.modulate.a = 0.776
 			if bola.atual_nao == 0 and bola.atual_sim == 0:
 				end_day()
+		papers.proxima_proposta()
+		
 	else: 
 		esgotado($"Não Button")
 		$AnimatedSprite2D.animation = 'default'
@@ -57,3 +74,7 @@ func end_day():
 	print(bola.DiaJogo)
 	#Puxar Relatório
 	#relatorio.inicializar()
+
+func botao_visivel():
+	var tween_botao = create_tween()
+	tween_botao.tween_property(self, "modulate:a", 1.0, 1.0)

@@ -225,27 +225,30 @@ var propostas_mitologicas = [
 var numeros_sorteados = []
 var decisoes = []
 var proposta_atual = -1
+var aguardando_resposta = false
 
 func registrar_decisao(aceita: bool):
-	print("decisao registrada")
+	if not aguardando_resposta:
+		return false
+	if not aguardando_resposta:
+		return false
+	if proposta_atual < 0 or proposta_atual >= numeros_sorteados.size():
+		return false
+
 	var indice_proposta_sorteada = numeros_sorteados[proposta_atual]
-	var resposta = ""
-	var consequencia = ""
-	var organizacao = propostas_mitologicas[indice_proposta_sorteada].organizacao
-	if aceita :
-		resposta = "Sim"
-		consequencia = propostas_mitologicas[indice_proposta_sorteada].sim
-	else:
-		resposta = "Não."
-		consequencia = propostas_mitologicas[indice_proposta_sorteada].nao
-	var decisao = {
-		"indice_proposta" : indice_proposta_sorteada,
+	var proposta = propostas_mitologicas[indice_proposta_sorteada]
+	var resposta = "Sim" if aceita else "Não"
+	var consequencia = proposta["sim"] if aceita else proposta["nao"]
+	var decisao = {"indice_proposta": indice_proposta_sorteada,
 		"resposta": resposta,
 		"consequencia": consequencia,
-		"organizacao": organizacao
-	}
+		"organizacao": proposta["organizacao"]}
+
 	decisoes.append(decisao)
-	print(decisao)
+	aguardando_resposta = false
+	print("Decisão registrada: ", decisao)
+	print("Total de decisões: ", decisoes.size())
+	return true
 
 func resumir_decisoes():
 	for i in decisoes.size():
@@ -254,6 +257,8 @@ func resumir_decisoes():
 		print(str(decisoes[i]["consequencia"]))
 
 func proxima_proposta():
+	if aguardando_resposta:
+		return
 	if decisoes.size() >=4 :
 		Global.decisoes = decisoes
 		get_tree().change_scene_to_packed(cena_relatorio)
@@ -265,8 +270,9 @@ func proxima_proposta():
 	criar_proposta(numeros_sorteados[proposta_atual])
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
-		proxima_proposta()
+	#if event.is_action_pressed("ui_accept"):
+	#	proxima_proposta()
+	pass
 
 func sorteio_gameplay():
 	var quantidade_de_propostas = propostas_mitologicas.size()
@@ -276,15 +282,19 @@ func sorteio_gameplay():
 	numeros_sorteados.shuffle()
 
 func iniciar():
-	proxima_proposta()
+	if proposta_atual == -1 and decisoes.is_empty():
+		proxima_proposta()
 
 func _ready() -> void:
 	proposta_atual=-1
+	$Sprite2D.modulate.a = 0.0
 	sorteio_gameplay()
-	iniciar()
+	#iniciar()
 
 func animacao_subida():
-	var posicao_final : Vector2 = get_viewport_rect().size / 2
+	$Sprite2D.modulate.a = 1.0
+	var posicao_final : Vector2 = position
+	position.y = get_viewport_rect().size.y + 500
 	var tween = create_tween()
 	tween.tween_property(self,"position", posicao_final,1)
 	return
@@ -297,12 +307,11 @@ func criar_proposta(indice: int):
 	$Sprite2D/REQ.text = propostas_mitologicas[indice]["req"]
 	$Sprite2D/Descricao.text = propostas_mitologicas[indice]["descricao"]
 	# comecar fora da tela
-	position.x = get_viewport_rect().size.x / 2
-	position.y = get_viewport_rect().size.y
+	#position.x = get_viewport_rect().size.x / 2
+	#position.y = get_viewport_rect().size.y
 	animacao_subida()
-	registrar_decisao(true)
+	aguardando_resposta = true
 	#resumir_decisoes()
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

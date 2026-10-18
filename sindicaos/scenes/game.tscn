@@ -53,8 +53,6 @@ z_index = 10
 [node name="8_ball" parent="Bola e Deusa" unique_id=300774040 instance=ExtResource("3_lnu2h")]
 position = Vector2(-380, 6)
 
-[node name="Papers" parent="." unique_id=1270649175 instance=ExtResource("4_0tnpc")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=793919449]
 
 [node name="rascunho" type="Sprite2D" parent="CanvasLayer" unique_id=581808578]
@@ -139,6 +137,11 @@ offset_bottom = 1637.3867
 theme_override_font_sizes/font_size = 37
 action_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="Propostas" type="Node" parent="." unique_id=1797049879]
+
+[node name="Papers" parent="Propostas" unique_id=1270649175 instance=ExtResource("4_0tnpc")]
+position = Vector2(-2.9999998, -66.99999)
 
 [connection signal="pressed" from="CanvasLayer/Botões Sim_Não/Sim Button" to="CanvasLayer/Botões Sim_Não" method="_on_sim_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Botões Sim_Não/Não Button" to="CanvasLayer/Botões Sim_Não" method="_on_não_button_pressed"]
