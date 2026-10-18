@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgpivl0khbpmf"
-path="res://.godot/imported/mão.png-f6372a9df21501f1bee41a6ef2ac17c3.ctex"
+uid="uid://xt638vthae8i"
+path="res://.godot/imported/selecionar_128px.png-b5c7efe2e15362c51ea4b5a2bce65baf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Assets/mão.png"
-dest_files=["res://.godot/imported/mão.png-f6372a9df21501f1bee41a6ef2ac17c3.ctex"]
+source_file="res://Assets/2D Assets/cursor/selecionar_128px.png"
+dest_files=["res://.godot/imported/selecionar_128px.png-b5c7efe2e15362c51ea4b5a2bce65baf.ctex"]
 
 [params]
 
