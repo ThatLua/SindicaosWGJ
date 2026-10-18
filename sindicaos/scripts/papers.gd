@@ -60,7 +60,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta sacoi.png",
 		"representante": "Laurimar Saco Fundo",
-		"organizacao": "Cooperativa xxxx",
+		"organizacao": "Saco & Sociedade",
 		"req": "REQ 562/2026",
 		"descricao": "Solicitamos autorização para recolher crianças que desobedecerem aos responsáveis e encaminhá-las ao nosso programa especial de reeducação dentro do saco.",
 		"sim": "Os responsáveis ganham uma nova forma de ameaçar os filhos, mas os desaparecimentos infantis aumentam drasticamente.",
@@ -69,7 +69,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta sacoi.png",
 		"representante": "Laurimar Saco Fundo",
-		"organizacao": "Cooperativa xxxx",
+		"organizacao": "Saco & Sociedade",
 		"req": "REQ 527/2023",
 		"descricao": "Solicitamos a implementação de um toque de recolher para crianças, permitindo o recolhimento daquelas encontradas na rua após o horário estabelecido.",
 		"sim": "As ruas ficam mais tranquilas durante a noite, mas crianças que voltam tarde da escola ou de atividades extracurriculares começam a desaparecer.",
@@ -78,7 +78,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta velha.png",
 		"representante": "Dona Zefina Pisadeira",
-		"organizacao": "Sindicato Soníferos LTDA",
+		"organizacao": "Sindicato Soníferos",
 		"req": "REQ 314/2024",
 		"descricao": "Solicitamos que todos os cidadãos façam uma refeição pesada antes de dormir, para garantir condições adequadas ao nosso trabalho noturno.",
 		"sim": "A procura por restaurantes noturnos cresce, mas aumentam os gastos domésticos e os relatos de noites mal dormidas.",
@@ -87,7 +87,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta velha.png",
 		"representante": "Dona Zefina Pisadeira",
-		"organizacao": "Sindicato Soníferos LTDA",
+		"organizacao": "Sindicato Soníferos",
 		"req": "REQ 681/2026",
 		"descricao": "Solicitamos que todas as residências apaguem as luzes às 22h, facilitando o descanso e a circulação das criaturas noturnas.",
 		"sim": "O consumo de energia diminui, mas trabalhadores noturnos e estabelecimentos que funcionam até tarde são prejudicados.",
@@ -96,7 +96,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta loira.png",
 		"representante": "Maria Augusta de Oliveira Borges",
-		"organizacao": "Associação dos Fenômenos Escolares",
+		"organizacao": "Associação Escolar",
 		"req": "REQ 791/1891",
 		"descricao": "Solicitamos a instalação de espelhos de corpo inteiro em todos os banheiros públicos, para facilitar nossas aparições oficiais.",
 		"sim": "Os banheiros recebem melhorias e novos espelhos, mas o orçamento de manutenção de outras instalações é reduzido.",
@@ -105,7 +105,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta loira.png",
 		"representante": "Maria Augusta de Oliveira Borges",
-		"organizacao": "Associação dos Fenômenos Escolares",
+		"organizacao": "Associação Escolar",
 		"req": "REQ 204/2022",
 		"descricao": "Solicitamos a inclusão de uma aula semanal de invocação sobrenatural em todas as escolas públicas.",
 		"sim": "Estudantes aprendem sobre lendas e fenômenos sobrenaturais, mas aulas regulares perdem espaço na grade escolar.",
@@ -132,7 +132,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Curupira.png",
 		"representante": "Curupira Py",
-		"organizacao": "Conselho de Proteção Florestal",
+		"organizacao": "Conselho Florestal",
 		"req": "REQ 425/2026",
 		"descricao": "Solicitamos a proibição de novas construções em qualquer terreno que possua ao menos uma árvore.",
 		"sim": "A cobertura vegetal é protegida, mas obras de moradia e infraestrutura ficam paralisadas.",
@@ -141,7 +141,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Curupira.png",
 		"representante": "Curupira Py",
-		"organizacao": "Conselho de Proteção Florestal",
+		"organizacao": "Conselho Florestal",
 		"req": "REQ 458/2024",
 		"descricao": "Solicitamos a cobrança de uma taxa para qualquer pessoa que atravesse trilhas, parques ou áreas arborizadas.",
 		"sim": "A arrecadação financia a preservação ambiental, mas moradores de áreas afastadas enfrentam dificuldades para se deslocar.",
@@ -150,7 +150,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Perna.png",
 		"representante": "Perna Cabeluda",
-		"organizacao": "Liga das Entidades Desmembradas",
+		"organizacao": "Liga das Entidades",
 		"req": "REQ 638/2023",
 		"descricao": "Solicitamos a criação de faixas de trânsito exclusivas para entidades desmembradas desacompanhadas, sem exigência de veículo ou condutor.",
 		"sim": "A Perna Cabeluda circula com mais segurança, mas faixas de trânsito são retiradas de carros, bicicletas e ônibus por falta de espaço nas vias.",
@@ -159,7 +159,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Perna.png",
 		"representante": "Perna Cabeluda",
-		"organizacao": "Liga das Entidades Desmembradas",
+		"organizacao": "Liga das Entidades",
 		"req": "REQ 162/2023",
 		"descricao": "Solicitamos o reconhecimento oficial de membros sentientes como cidadãos independentes, com direito a documentos e benefícios próprios.",
 		"sim": "Seres antes sem identidade legal passam a ter acesso a serviços, mas o sistema público enfrenta disputas inéditas sobre cadastro e elegibilidade.",
@@ -168,7 +168,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Boitatá.png",
 		"representante": "Boitatá Junior",
-		"organizacao": "Ordem dos Guardiões do Fogo",
+		"organizacao": "Ordem das Chamas",
 		"req": "REQ 251/2025",
 		"descricao": "Solicitamos a substituição da iluminação pública por chamas supervisionadas por Boitatás, mais econômicas e ecologicamente responsáveis.",
 		"sim": "O consumo de eletricidade diminui, mas o risco de incêndios e os custos de segurança aumentam.",
@@ -177,7 +177,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Boitatá.png",
 		"representante": "Boitatá Junior",
-		"organizacao": "Ordem dos Guardiões do Fogo",
+		"organizacao": "Ordem das Chamas",
 		"req": "REQ 873/2026",
 		"descricao": "Solicitamos a cobrança de multas de qualquer estabelecimento que produza fumaça, incluindo padarias, churrasqueiras e fábricas.",
 		"sim": "A qualidade do ar melhora em algumas áreas, mas pequenos comércios e restaurantes enfrentam custos e restrições.",
@@ -186,7 +186,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Lontra.png",
 		"representante": "Olívia Lontrinha",
-		"organizacao": "Associação das Lontras Ribeirinhas",
+		"organizacao": "Liga das Lontras",
 		"req": "REQ 904/2024",
 		"descricao": "Solicitamos que todos os peixes dos rios públicos sejam considerados patrimônio alimentar das lontras registradas no município.",
 		"sim": "As lontras têm acesso facilitado à alimentação, mas pescadores locais perdem parte de suas capturas e protestam contra a medida.",
@@ -195,7 +195,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Lontra.png",
 		"representante": "Olívia Lontrinha",
-		"organizacao": "Associação das Lontras Ribeirinhas",
+		"organizacao": "Liga das Lontras",
 		"req": "REQ 395/2025",
 		"descricao": "Solicitamos a instalação de escorregadores aquáticos em todas as repartições públicas, para tornar as filas mais agradáveis.",
 		"sim": "As repartições ficam mais divertidas e atraem visitantes, mas o espaço de atendimento diminui e os custos de manutenção aumentam.",
@@ -204,7 +204,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Human.png",
 		"representante": "Augusto Almeida",
-		"organizacao": "Federação dos Cidadãos Humanos",
+		"organizacao": "Federação Humana",
 		"req": "REQ 117/2026",
 		"descricao": "Solicitamos que todos os seres mitológicos se registrem no governo e informem suas habilidades, hábitos e possíveis riscos à população.",
 		"sim": "O governo passa a mapear melhor os riscos e as necessidades dos grupos, mas criaturas sem documentação enfrentam dificuldades para acessar serviços públicos.",
@@ -213,7 +213,7 @@ var propostas_mitologicas = [
 	{
 		"imagem": "res://Assets/2D Assets/Papers/Carta Human.png",
 		"representante": "Augusto Almeida",
-		"organizacao": "Federação dos Cidadãos Humanos",
+		"organizacao": "Federação Humana",
 		"req": "REQ 614/2022",
 		"descricao": "Solicitamos a cobrança de uma taxa sobre qualquer uso de magia em espaços públicos, independentemente da finalidade.",
 		"sim": "O governo arrecada recursos para infraestrutura, mas curandeiros, pequenos comerciantes e cidadãos que dependem de magia passam a pagar mais e se revoltam.",
@@ -245,8 +245,7 @@ func registrar_decisao(aceita: bool):
 func resumir_decisoes():
 	for i in decisoes.size():
 		print("Você decidiu ",str(decisoes[i]["resposta"]),".")
-		print(str(decisoes[i]["consequencia"]))
-		
+		print(propostas_mitologicas[decisoes[i]["indice_proposta"]])
 		#print("Você decidiu ", str(decisaoresposta))
 
 func proxima_proposta():
