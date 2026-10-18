@@ -112,7 +112,7 @@ var propostas_mitologicas = [
 		"nao": "A grade escolar permanece intacta, mas os representantes sobrenaturais acusam o governo de desvalorizar o conhecimento ancestral, pressionando o governo pela criação de uma disciplina alternativa."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Claude Guimarães",
 		"organizacao": "União dos Lobisomens",
 		"req": "REQ 086/2022",
@@ -121,7 +121,7 @@ var propostas_mitologicas = [
 		"nao": "Os serviços mantêm suas escalas, mas os lobisomens organizam uma greve e ameaçam abandonar seus postos."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Claude Guimarães",
 		"organizacao": "União dos Lobisomens",
 		"req": "REQ 739/2025",
@@ -130,7 +130,7 @@ var propostas_mitologicas = [
 		"nao": "O silêncio noturno é mantido por lei, mas os lobisomens passam a realizar manifestações barulhentas em frente ao gabinete."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Curupira Py",
 		"organizacao": "Conselho de Proteção Florestal",
 		"req": "REQ 425/2026",
@@ -139,7 +139,7 @@ var propostas_mitologicas = [
 		"nao": "A cidade consegue expandir suas construções, mas a perda de vegetação aumenta e Curupira começa a desorientar equipes de obras."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Curupira Py",
 		"organizacao": "Conselho de Proteção Florestal",
 		"req": "REQ 458/2024",
@@ -148,7 +148,7 @@ var propostas_mitologicas = [
 		"nao": "As trilhas permanecem acessíveis a todos, mas o Curupira começa a confundir os caminhos para afastar os visitantes, fazendo alguns moradores chegarem atrasados ao trabalho e outros darem voltas em círculos."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Perna Cabeluda",
 		"organizacao": "Liga das Entidades Desmembradas",
 		"req": "REQ 638/2023",
@@ -157,7 +157,7 @@ var propostas_mitologicas = [
 		"nao": "As vias mantêm sua organização, mas a Perna Cabeluda passa a saltar sobre o trânsito, provocando congestionamentos."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Perna Cabeluda",
 		"organizacao": "Liga das Entidades Desmembradas",
 		"req": "REQ 162/2023",
@@ -166,7 +166,7 @@ var propostas_mitologicas = [
 		"nao": "As regras administrativas permanecem inalteradas, mas a Perna Cabeluda organiza uma campanha pública por reconhecimento."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Boitatá Junior",
 		"organizacao": "Ordem dos Guardiões do Fogo",
 		"req": "REQ 251/2025",
@@ -175,7 +175,7 @@ var propostas_mitologicas = [
 		"nao": "A iluminação convencional continua funcionando, mas o gasto público com energia permanece elevado e Boitatá acusa o governo de desperdiçar recursos."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Boitatá Junior",
 		"organizacao": "Ordem dos Guardiões do Fogo",
 		"req": "REQ 873/2026",
@@ -184,7 +184,7 @@ var propostas_mitologicas = [
 		"nao": "Os estabelecimentos mantêm suas atividades, mas a poluição atmosférica continua prejudicando bairros próximos às áreas industriais."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Olívia Lontrinha",
 		"organizacao": "Associação das Lontras Ribeirinhas",
 		"req": "REQ 904/2024",
@@ -193,7 +193,7 @@ var propostas_mitologicas = [
 		"nao": "A pesca mantém suas regras atuais, mas as lontras passam a invadir mercados de peixe em busca de alimento."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Olívia Lontrinha",
 		"organizacao": "Associação das Lontras Ribeirinhas",
 		"req": "REQ 395/2025",
@@ -202,7 +202,7 @@ var propostas_mitologicas = [
 		"nao": "O orçamento público é preservado, mas a representante das lontras inicia uma campanha de protesto usando escorregadores improvisados nos corredores."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Augusto Almeida",
 		"organizacao": "Federação dos Cidadãos Humanos",
 		"req": "REQ 117/2026",
@@ -211,7 +211,7 @@ var propostas_mitologicas = [
 		"nao": "Os grupos preservam sua privacidade, mas o governo continua sem dados suficientes para planejar serviços e responder a incidentes."
 	},
 	{
-		"imagem": "",
+		"imagem": "res://Assets/2D Assets/Papers/folha.png",
 		"representante": "Augusto Almeida",
 		"organizacao": "Federação dos Cidadãos Humanos",
 		"req": "REQ 614/2022",
@@ -220,10 +220,21 @@ var propostas_mitologicas = [
 		"nao": "A magia continua acessível à população, mas o uso descontrolado de feitiços em espaços públicos aumenta, causando pequenos acidentes e obrigando o governo a reforçar a fiscalização."
 	}
 ]
+
+var numeros_sorteados = []
+
+func sorteio_gameplay():
+	var quantidade_de_propostas = propostas_mitologicas.size()
+	for i in range(quantidade_de_propostas):
+		numeros_sorteados.append(i)
+	numeros_sorteados.shuffle()
+	print(numeros_sorteados)	
+	print(propostas_mitologicas[23])
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("tamanho do vetor de propostas:")
-	print(propostas_mitologicas.size())
+	sorteio_gameplay()
 	criar_proposta(1)
 	pass # Replace with function body.
 
