@@ -1,11 +1,12 @@
 extends Control
 
 @onready var fade_rect: ColorRect = $CanvasLayer/ColorRect
+@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer
+
 var cena_explicacao_jogo = "res://scenes/cena_explicacoes.tscn"
-	
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	audio_stream_player_2d.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -23,3 +24,6 @@ func _on_créditos_pressed() -> void:
 	
 func _on_sair_pressed() -> void:
 	get_tree().quit()
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player_2d.play()

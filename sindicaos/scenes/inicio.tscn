@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://cqyk5gh0ovf1"]
 
 [ext_resource type="Script" uid="uid://d4i54f7uup80x" path="res://scripts/inicio.gd" id="1_i3824"]
-
-[sub_resource type="Gradient" id="Gradient_i3824"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xg841"]
-gradient = SubResource("Gradient_i3824")
+[ext_resource type="Texture2D" uid="uid://dsjin2541dyo2" path="res://Assets/2D Assets/Esboco_1.png" id="2_4vxdk"]
+[ext_resource type="AudioStream" uid="uid://ds47cmtvrg7y7" path="res://Assets/Som/MúsicaJogo.mp3" id="3_q3pj3"]
 
 [node name="MainMenu" type="Control" unique_id=1927412215]
 layout_mode = 3
@@ -18,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_i3824")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1076347308]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=841227395]
 offset_right = 40.0
@@ -29,9 +26,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_xg841")
+texture = ExtResource("2_4vxdk")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=186029843]
 layout_mode = 1
@@ -68,7 +67,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 37
 text = "Sair"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1384555833]
+stream = ExtResource("3_q3pj3")
+
 [connection signal="gui_input" from="MarginContainer/VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_gui_input"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Créditos" to="." method="_on_créditos_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
