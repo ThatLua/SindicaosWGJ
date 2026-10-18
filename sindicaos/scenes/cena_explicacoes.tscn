@@ -29,8 +29,11 @@ offset_top = -1700.0
 offset_right = 1355.0
 offset_bottom = 1300.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 180
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur mattis purus vehicula suscipit. Etiam varius metus vel pulvinar imperdiet. Sed hendrerit nec nunc sed molestie. Cras nec lorem diam. Nullam rutrum tellus eu lacus efficitur, id finibus mi tincidunt."
+theme_override_font_sizes/normal_font_size = 150
+text = "Em um mundo habitado por criaturas míticas e seres do folclore, cada comunidade tem seus próprios interesses e reivindicações.
+Como funcionário do governo, seu trabalho é analisar as propostas que chegam até você e decidir quais serão aprovadas ou recusadas.
+A cada dia, a Deusa da Sorte determinará quantos SIMs e NÃOs você poderá utilizar. Mas escolha com cuidado, pois cada decisão traz consequências para a sociedade.
+Que os astros guiem seu julgamento!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
