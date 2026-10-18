@@ -2,40 +2,41 @@
 
 [ext_resource type="Texture2D" uid="uid://bhbxbe7fyo855" path="res://Assets/2D Assets/Papers/folha.png" id="1_gdywk"]
 [ext_resource type="Script" uid="uid://dbdk0sdpryy31" path="res://scripts/relatorio.gd" id="1_i627k"]
-[ext_resource type="Script" uid="uid://1ysf6twhk75o" path="res://scripts/sprite2d_relatorio.gd" id="2_i627k"]
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_sh71o"]
-[ext_resource type="FontFile" uid="uid://br2l4rfoug72h" path="res://fonts/PROPOSTAS KumarOne-Regular.ttf" id="3_i627k"]
+[ext_resource type="Texture2D" uid="uid://qmmdp31shyag" path="res://Assets/2D Assets/background/Background1.1.png" id="2_x7bp8"]
+[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://Assets/Fontes/Fondamento-Regular.ttf" id="5_i627k"]
 
 [node name="Relatorio" type="Node2D" unique_id=711176752]
 script = ExtResource("1_i627k")
 
-[node name="Color" type="ColorRect" parent="." unique_id=1003921268]
-offset_right = 1920.0
-offset_bottom = 1080.0
+[node name="Superfície" type="Sprite2D" parent="." unique_id=241432373]
+texture = ExtResource("2_x7bp8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2105286956]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_gdywk")
-script = ExtResource("2_i627k")
 
 [node name="Relatório" type="RichTextLabel" parent="Sprite2D" unique_id=2019580334]
-offset_left = -780.0
-offset_top = -1915.0
-offset_right = 1220.0
-offset_bottom = -1614.0
+offset_left = -1008.0
+offset_top = -1872.0
+offset_right = 992.0
+offset_bottom = -1571.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_sh71o")
 theme_override_font_sizes/normal_font_size = 300
 text = "Lorem Ipsum
 "
 fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Descricao" type="RichTextLabel" parent="Sprite2D" unique_id=1171642655]
-offset_left = -1200.0
+offset_left = -1296.0
 offset_top = -1495.0
-offset_right = 1300.0
-offset_bottom = 2505.0
+offset_right = 1308.0
+offset_bottom = 1776.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_i627k")
-theme_override_font_sizes/normal_font_size = 85
+theme_override_fonts/normal_font = ExtResource("5_i627k")
+theme_override_font_sizes/normal_font_size = 110
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non egestas quam. Fusce eget tortor vitae risus bibendum semper. "
+horizontal_alignment = 1

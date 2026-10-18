@@ -40,9 +40,8 @@ func mostrar_final() -> void:
 		texto_final.text = textos_finais[1]
 	else:
 		texto_final.text = textos_finais[2]
-
 	print("SIM: ", sims, " | NÃO: ", nãos)
 
 func reiniciar_jogo() -> void:
 	Global.decisoes.clear()
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/inicio.tscn")

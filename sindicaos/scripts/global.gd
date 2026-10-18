@@ -1,5 +1,6 @@
 extends Node
 
+var DiaJogo: int = 1
 var cursor_normal =  preload("res://Assets/2D Assets/cursor/selecionar.png")
 var cursor_clique = preload("res://Assets/2D Assets/cursor/clic.png")
 var decisoes = []

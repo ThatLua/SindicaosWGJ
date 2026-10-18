@@ -32,7 +32,8 @@ func _ready() -> void:
 	$Control/RichTextLabel2.modulate.a = 0.0
 	$Control/RichTextLabel3.modulate.a = 0.0
 	#definir texto do dia
-	$Speech/Dialogo.text = str(falas[DiaJogo])
+	DiaJogo = Global.DiaJogo
+	$Speech/Dialogo.text = str(falas[DiaJogo - 1])
 	#resetar sorteio
 	sorteio_realizado = false
 	startSorteio()
