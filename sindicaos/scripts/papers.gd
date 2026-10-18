@@ -228,18 +228,24 @@ func sorteio_gameplay():
 	for i in range(quantidade_de_propostas):
 		numeros_sorteados.append(i)
 	numeros_sorteados.shuffle()
-	print(numeros_sorteados)	
-	print(propostas_mitologicas[23])
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sorteio_gameplay()
-	criar_proposta(1)
-	pass # Replace with function body.
+	# criar_proposta(1)
+	# comecar fora da tela
+	position.x = get_viewport_rect().size.x / 2
+	position.y = get_viewport_rect().size.y
+	animacao_subida()
+
+func animacao_subida():
+	var posicao_final : Vector2 = get_viewport_rect().size / 2
+	var tween = create_tween()
+	tween.tween_property(self,"position", posicao_final,1)
+	return
 
 func criar_proposta(indice: int):
-	position = get_viewport_rect().size / 2
+	#position = get_viewport_rect().size / 2
 	$Sprite2D.texture = load(propostas_mitologicas[indice]["imagem"])
 	$Sprite2D/Organizacao.text = propostas_mitologicas[indice]["organizacao"]
 	$Sprite2D/Representante.text = propostas_mitologicas[indice]["representante"]
