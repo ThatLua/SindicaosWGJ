@@ -18,8 +18,8 @@ func sorteio_diario():
 		num_sim = 1 + 4 - num_nao
 		shake_8ball() 
 		await get_tree().create_timer(1.2).timeout
-		$Control/RichTextLabel.text = str(" SIM", num_sim)
-		$Control/RichTextLabel2.text = str(" NÃO",num_nao)
+		$Control/RichTextLabel.text = str("sim ", num_sim)
+		$Control/RichTextLabel2.text = str("não ",num_nao)
 		print("Sims: ",num_sim)
 		print("Nãos: ",num_nao)
 		print("Total de respostas: ", num_sim + num_nao)

@@ -2,45 +2,53 @@
 
 [ext_resource type="Script" uid="uid://h33lq7pxrgbp" path="res://scripts/magicball.gd" id="1_60j1f"]
 [ext_resource type="Texture2D" uid="uid://dmgj16iassh61" path="res://Assets/3D assets/8Ball/cobre.png" id="2_3vpcg"]
-[ext_resource type="FontFile" uid="uid://bhd5bth0x6kee" path="res://Assets/Fontes/UI E TITULOS alagard.ttf" id="3_3vpcg"]
+[ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="3_qn50n"]
+[ext_resource type="Texture2D" uid="uid://dinnqgd56723a" path="res://Assets/2D Assets/Deusa/deusa.png" id="4_qn50n"]
+[ext_resource type="Texture2D" uid="uid://kyjbw5iuxtqr" path="res://Assets/2D Assets/Deusa/luz.png" id="5_mmf6d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]
 radius = 11.500679
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mmf6d"]
+blend_mode = 1
 
 [node name="8_ball" type="Area2D" unique_id=300774040]
 position = Vector2(1, 1)
 script = ExtResource("1_60j1f")
 
 [node name="8ball" type="Sprite2D" parent="." unique_id=772138949]
-scale = Vector2(0.2, 0.2)
+z_index = 2
+scale = Vector2(0.34, 0.34)
 texture = ExtResource("2_3vpcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
 visible = false
-position = Vector2(0, -2)
-scale = Vector2(8.035104, 8)
+position = Vector2(0, -3.4)
+scale = Vector2(13.659677, 13.6)
 shape = SubResource("CircleShape2D_penyb")
 debug_color = Color(0.29165423, 0.39936596, 0.4169704, 0.41960785)
 
 [node name="Control" type="Control" parent="." unique_id=1269769663]
+z_index = 3
 layout_mode = 3
 anchors_preset = 0
-offset_left = -50.0
-offset_top = -67.0
-offset_right = 53.0
-offset_bottom = 24.0
+offset_left = -92.0
+offset_top = -105.0
+offset_right = 91.0
+offset_bottom = 25.0
 mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1365589011]
 modulate = Color(0.08235294, 0.36862746, 0.03137255, 1)
 layout_mode = 0
-offset_left = 1.0
-offset_top = 17.0
-offset_right = 99.0
-offset_bottom = 47.0
+offset_left = -25.0
+offset_top = 11.999998
+offset_right = 212.0
+offset_bottom = 77.0
 mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("3_3vpcg")
-text = "SIM X
+theme_override_fonts/normal_font = ExtResource("3_qn50n")
+theme_override_font_sizes/normal_font_size = 60
+text = "sim x
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -49,16 +57,30 @@ language = "pt_BR"
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control" unique_id=932292043]
 modulate = Color(0.5686275, 0.08235294, 0.08235294, 1)
 layout_mode = 0
-offset_left = 1.0
-offset_top = 41.0
-offset_right = 99.0
-offset_bottom = 71.0
+offset_left = -26.0
+offset_top = 56.999992
+offset_right = 208.0
+offset_bottom = 134.0
 mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("3_3vpcg")
-text = "NÃO Y
+theme_override_fonts/normal_font = ExtResource("3_qn50n")
+theme_override_font_sizes/normal_font_size = 60
+text = "não y
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 language = "pt_BR"
+
+[node name="Deusa" type="Sprite2D" parent="." unique_id=1255043948]
+z_index = 1
+position = Vector2(50.193726, 84.6145)
+scale = Vector2(0.85121346, 0.8512135)
+texture = ExtResource("4_qn50n")
+
+[node name="Luz" type="Sprite2D" parent="." unique_id=1676194146]
+modulate = Color(1, 1, 1, 0.47058824)
+material = SubResource("CanvasItemMaterial_mmf6d")
+position = Vector2(50.193726, 56.614502)
+scale = Vector2(0.85121346, 0.8512135)
+texture = ExtResource("5_mmf6d")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
