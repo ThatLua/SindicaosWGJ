@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://buqkduef71vs"]
+
+[ext_resource type="Texture2D" uid="uid://bhbxbe7fyo855" path="res://Assets/2D Assets/Papers/folha.png" id="1_gdywk"]
+[ext_resource type="Script" uid="uid://1ysf6twhk75o" path="res://scripts/sprite2d_relatorio.gd" id="2_i627k"]
+[ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_sh71o"]
+[ext_resource type="FontFile" uid="uid://br2l4rfoug72h" path="res://fonts/PROPOSTAS KumarOne-Regular.ttf" id="3_i627k"]
+
+[node name="Relatorio" type="Node2D" unique_id=711176752]
+
+[node name="Color" type="ColorRect" parent="." unique_id=1003921268]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2105286956]
+position = Vector2(972.99994, 572.99994)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gdywk")
+script = ExtResource("2_i627k")
+
+[node name="Relatório" type="RichTextLabel" parent="Sprite2D" unique_id=2019580334]
+offset_left = -580.0
+offset_top = -1770.0
+offset_right = 1420.0
+offset_bottom = -1470.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_sh71o")
+theme_override_font_sizes/normal_font_size = 180
+text = "Lorem Ipsum
+"
+
+[node name="Descricao" type="RichTextLabel" parent="Sprite2D" unique_id=1171642655]
+offset_left = -1220.0
+offset_top = -700.0
+offset_right = 1280.0
+offset_bottom = 1300.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_i627k")
+theme_override_font_sizes/normal_font_size = 126
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non egestas quam. Fusce eget tortor vitae risus bibendum semper. "

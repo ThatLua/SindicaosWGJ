@@ -222,9 +222,23 @@ var propostas_mitologicas = [
 ]
 
 var numeros_sorteados = []
+var decisoes = []
+var proposta_atual = -1
+
+func proxima_proposta():
+	proposta_atual += 1
+	criar_proposta(numeros_sorteados[proposta_atual])
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		proxima_proposta()
 
 func sorteio_gameplay():
 	var quantidade_de_propostas = propostas_mitologicas.size()
+	
+	decisoes.resize(quantidade_de_propostas)
+	decisoes.fill(0)
+	
 	for i in range(quantidade_de_propostas):
 		numeros_sorteados.append(i)
 	numeros_sorteados.shuffle()
@@ -232,11 +246,7 @@ func sorteio_gameplay():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sorteio_gameplay()
-	# criar_proposta(1)
-	# comecar fora da tela
-	position.x = get_viewport_rect().size.x / 2
-	position.y = get_viewport_rect().size.y
-	animacao_subida()
+	proxima_proposta()
 
 func animacao_subida():
 	var posicao_final : Vector2 = get_viewport_rect().size / 2
@@ -251,7 +261,11 @@ func criar_proposta(indice: int):
 	$Sprite2D/Representante.text = propostas_mitologicas[indice]["representante"]
 	$Sprite2D/REQ.text = propostas_mitologicas[indice]["req"]
 	$Sprite2D/Descricao.text = propostas_mitologicas[indice]["descricao"]
-	pass
+	# comecar fora da tela
+	position.x = get_viewport_rect().size.x / 2
+	position.y = get_viewport_rect().size.y
+	animacao_subida()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
