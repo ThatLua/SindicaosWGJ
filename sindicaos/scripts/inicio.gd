@@ -4,6 +4,7 @@ extends Control
 @onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer
 
 var cena_explicacao_jogo = "res://scenes/cena_explicacoes.tscn"
+var cena_creditos = "res://scenes/creditos.tscn"
 
 func _ready() -> void:
 	audio_stream_player_2d.play()
@@ -20,6 +21,7 @@ func _on_novo_jogo_pressed() -> void:
 	print("novo jogo")
 
 func _on_créditos_pressed() -> void:
+	get_tree().change_scene_to_file(cena_creditos)
 	print("tela de creditos")
 	
 func _on_sair_pressed() -> void:

@@ -1,3 +1,69 @@
 [gd_scene format=3 uid="uid://caxodd5sd2a3u"]
 
-[node name="Creditos" type="Node2D" unique_id=1779651980]
+[ext_resource type="Script" uid="uid://tu3ts0y4xksj" path="res://scripts/creditos.gd" id="1_6yhot"]
+[ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_6yhot"]
+
+[sub_resource type="Gradient" id="Gradient_ul0vb"]
+colors = PackedColorArray(0, 0, 0, 1, 0.33333334, 0.14509805, 0.23921569, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6yhot"]
+gradient = SubResource("Gradient_ul0vb")
+
+[node name="Creditos" type="Control" unique_id=475226728]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6yhot")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=99413856]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_6yhot")
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=755466597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -500.0
+offset_right = 850.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=392217732]
+layout_mode = 2
+
+[node name="Créditos" type="RichTextLabel" parent="MarginContainer2/VBoxContainer" unique_id=847526797]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/normal_font = ExtResource("2_6yhot")
+theme_override_font_sizes/normal_font_size = 80
+text = "Créditos"
+fit_content = true
+
+[node name="Nomes" type="RichTextLabel" parent="MarginContainer2/VBoxContainer" unique_id=442092962]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/normal_font = ExtResource("2_6yhot")
+theme_override_font_sizes/normal_font_size = 50
+text = "[clara] → Design de Jogos, Narrativa, UI/UX, Gestão de Projetos
+[barbiGi] → Animação, UI/UX, Gestão de Projetos
+[beatriz] → Arte 2D, Design de Jogos, Narrativa, UI/UX, Áudio de Jogos, Gestão de Projetos
+[leler] → Arte 2D, Animação, UI/UX
+[Lari] → Programação
+[na Lua] → Arte 3D, Programação"
+fit_content = true
