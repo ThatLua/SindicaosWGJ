@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	pass
 
 
+
 func _on_novo_jogo_pressed() -> void:
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "modulate:a", 1.0, 1)
@@ -21,9 +22,9 @@ func _on_novo_jogo_pressed() -> void:
 	get_tree().change_scene_to_file(cena_explicacao_jogo)
 	print("novo jogo")
 
-func _on_créditos_pressed() -> void:
-	get_tree().change_scene_to_file(cena_creditos)
-	print("tela de creditos")
+#func _on_créditos_pressed() -> void:
+#	get_tree().change_scene_to_file(cena_creditos)
+#	print("tela de creditos")
 
 func _on_audio_stream_player_finished() -> void:
 	audio_stream_player_2d.play()
@@ -31,3 +32,10 @@ func _on_audio_stream_player_finished() -> void:
 func _on_ajustes_pressed() -> void:
 	print("Configurações")
 	pass # Replace with function body.
+
+func _on_créditos_pressed() -> void:
+	print("oi")
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file(cena_creditos)
+	#	print("tela de creditos")

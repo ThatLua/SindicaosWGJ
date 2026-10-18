@@ -1,6 +1,10 @@
 extends Node2D
 
-var explicacao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur mattis purus vehicula suscipit. Etiam varius metus vel pulvinar imperdiet. Sed hendrerit nec nunc sed molestie. Cras nec lorem diam. Nullam rutrum tellus eu lacus efficitur, id finibus mi tincidunt."
+var explicacao = "Em um mundo habitado por criaturas míticas e seres do folclore, cada comunidade tem seus próprios interesses e reivindicações.\n
+Como funcionário do governo, seu trabalho é analisar as propostas que chegam até você e decidir quais serão aprovadas ou recusadas.\n
+A cada dia, a Deusa da Sorte determinará quantos SIMs e NÃOs você poderá utilizar. Mas escolha com cuidado, pois cada decisão traz consequências para a sociedade.\n
+Que os astros guiem seu julgamento!"
+
 @onready var fade_rect: ColorRect = $CanvasLayer/ColorRect
 var cena_principal_jogo = "res://scenes/game.tscn"
 
