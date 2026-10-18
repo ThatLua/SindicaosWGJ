@@ -2,6 +2,7 @@ extends Node
 
 var cursor_normal =  preload("res://Assets/2D Assets/cursor/selecionar.png")
 var cursor_clique = preload("res://Assets/2D Assets/cursor/clic.png")
+var decisoes = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,5 +1,7 @@
 extends Area2D
 
+var cena_relatorio = preload("res://scenes/relatorio.tscn")
+
 var screensize = Vector2(1152, 648)
 
 var propostas_mitologicas = [
@@ -220,7 +222,6 @@ var propostas_mitologicas = [
 		"nao": "A magia continua acessível à população, mas o uso descontrolado de feitiços em espaços públicos aumenta, causando pequenos acidentes e obrigando o governo a reforçar a fiscalização."
 	}
 ]
-
 var numeros_sorteados = []
 var decisoes = []
 var proposta_atual = -1
@@ -230,6 +231,7 @@ func registrar_decisao(aceita: bool):
 	var indice_proposta_sorteada = numeros_sorteados[proposta_atual]
 	var resposta = ""
 	var consequencia = ""
+	var organizacao = propostas_mitologicas[indice_proposta_sorteada].organizacao
 	if aceita :
 		resposta = "Sim"
 		consequencia = propostas_mitologicas[indice_proposta_sorteada].sim
@@ -239,20 +241,26 @@ func registrar_decisao(aceita: bool):
 	var decisao = {
 		"indice_proposta" : indice_proposta_sorteada,
 		"resposta": resposta,
-		"consequencia": consequencia
+		"consequencia": consequencia,
+		"organizacao": organizacao
 	}
 	decisoes.append(decisao)
+	print(decisao)
 
 func resumir_decisoes():
 	for i in decisoes.size():
 		print("Você decidiu ",str(decisoes[i]["resposta"]),".")
-		print(propostas_mitologicas[decisoes[i]["indice_proposta"]])
-		#print("Você decidiu ", str(decisaoresposta))
+		print("Isso afetou a ", str(propostas_mitologicas[decisoes[i]["indice_proposta"]]["organizacao"]), ".")
+		print(str(decisoes[i]["consequencia"]))
 
 func proxima_proposta():
+	if decisoes.size() >=4 :
+		Global.decisoes = decisoes
+		get_tree().change_scene_to_packed(cena_relatorio)
+		return
 	proposta_atual += 1
-	if proposta_atual >= 24:
-		print("cabous")
+	if proposta_atual >= numeros_sorteados.size():
+		print("sem mais propostas")
 		return
 	criar_proposta(numeros_sorteados[proposta_atual])
 
@@ -267,10 +275,13 @@ func sorteio_gameplay():
 		numeros_sorteados.append(i)
 	numeros_sorteados.shuffle()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	sorteio_gameplay()
+func iniciar():
 	proxima_proposta()
+
+func _ready() -> void:
+	proposta_atual=-1
+	sorteio_gameplay()
+	iniciar()
 
 func animacao_subida():
 	var posicao_final : Vector2 = get_viewport_rect().size / 2
@@ -290,7 +301,7 @@ func criar_proposta(indice: int):
 	position.y = get_viewport_rect().size.y
 	animacao_subida()
 	registrar_decisao(true)
-	resumir_decisoes()
+	#resumir_decisoes()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
