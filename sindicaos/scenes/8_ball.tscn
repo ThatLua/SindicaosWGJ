@@ -5,6 +5,8 @@
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="3_qn50n"]
 [ext_resource type="Texture2D" uid="uid://dinnqgd56723a" path="res://Assets/2D Assets/Deusa/deusa.png" id="4_qn50n"]
 [ext_resource type="Texture2D" uid="uid://kyjbw5iuxtqr" path="res://Assets/2D Assets/Deusa/luz.png" id="5_mmf6d"]
+[ext_resource type="Texture2D" uid="uid://bwrx6m8t4uws1" path="res://Assets/2D Assets/Deusa/balao.png" id="6_7ybv8"]
+[ext_resource type="FontFile" uid="uid://yu6doq2kyl7a" path="res://Assets/Fontes/(DEUSA) MedievalSharp-Regular.ttf" id="7_jjqpl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]
 radius = 11.500679
@@ -17,12 +19,13 @@ script = ExtResource("1_60j1f")
 
 [node name="8ball" type="Sprite2D" parent="." unique_id=772138949]
 z_index = 2
+position = Vector2(1085.6, 271)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("2_3vpcg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056375722]
-visible = false
-position = Vector2(0, -3.4)
+z_index = 1
+position = Vector2(1085, 269)
 scale = Vector2(13.659677, 13.6)
 shape = SubResource("CircleShape2D_penyb")
 debug_color = Color(0.29165423, 0.39936596, 0.4169704, 0.41960785)
@@ -31,10 +34,10 @@ debug_color = Color(0.29165423, 0.39936596, 0.4169704, 0.41960785)
 z_index = 3
 layout_mode = 3
 anchors_preset = 0
-offset_left = -92.0
-offset_top = -105.0
-offset_right = 91.0
-offset_bottom = 25.0
+offset_left = 996.0
+offset_top = 164.0
+offset_right = 1179.0
+offset_bottom = 294.0
 mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1365589011]
@@ -69,9 +72,26 @@ horizontal_alignment = 1
 vertical_alignment = 1
 language = "pt_BR"
 
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control" unique_id=191783786]
+modulate = Color(0.33333334, 0.14509805, 0.23921569, 1)
+layout_mode = 0
+offset_left = -26.0
+offset_top = 1.0
+offset_right = 208.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_qn50n")
+theme_override_font_sizes/normal_font_size = 60
+text = "clique 
+aqui
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "pt_BR"
+
 [node name="Deusa" type="Sprite2D" parent="." unique_id=1255043948]
 z_index = 1
-position = Vector2(50.193726, 84.6145)
+position = Vector2(20, 85)
 scale = Vector2(0.85121346, 0.8512135)
 texture = ExtResource("4_qn50n")
 
@@ -81,5 +101,29 @@ material = SubResource("CanvasItemMaterial_mmf6d")
 position = Vector2(50.193726, 56.614502)
 scale = Vector2(0.85121346, 0.8512135)
 texture = ExtResource("5_mmf6d")
+
+[node name="Speech" type="Sprite2D" parent="." unique_id=2036188699]
+position = Vector2(797.0315, -91.56249)
+scale = Vector2(0.2780353, 0.27803528)
+texture = ExtResource("6_7ybv8")
+
+[node name="Dialogo" type="RichTextLabel" parent="Speech" unique_id=379252816]
+modulate = Color(0.42745098, 0.20392157, 0.1254902, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2131.2695
+offset_top = -1362.6868
+offset_right = -487.59375
+offset_bottom = -456.32697
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("7_jjqpl")
+theme_override_font_sizes/normal_font_size = 130
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed justo sem."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

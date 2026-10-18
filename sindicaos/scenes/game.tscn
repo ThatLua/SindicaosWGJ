@@ -49,7 +49,7 @@ z_index = 10
 [node name="Bola e Deusa" type="Node" parent="." unique_id=1858270364]
 
 [node name="8_ball" parent="Bola e Deusa" unique_id=300774040 instance=ExtResource("3_lnu2h")]
-position = Vector2(-160, 6)
+position = Vector2(-380, 6)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=793919449]
 
@@ -70,18 +70,28 @@ script = ExtResource("5_u5sy4")
 metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Botões Sim_Não" unique_id=968782927]
-position = Vector2(1250, 1310.0001)
+position = Vector2(1248.9999, 1310)
 scale = Vector2(0.64366955, 0.71826917)
 sprite_frames = SubResource("SpriteFrames_penyb")
 autoplay = "default"
 
+[node name="buttonNao" type="Polygon2D" parent="CanvasLayer/Botões Sim_Não/AnimatedSprite2D" unique_id=56510192]
+modulate = Color(0.15686275, 0, 0.019607844, 0.7764706)
+position = Vector2(49.948975, -113.6366)
+polygon = PackedVector2Array(-14.216431, -20.01831, -1.7877197, -21.410522, 276.3053, -22.802734, 360.19934, 45.41687, 358.646, 48.201538, 355.53882, 49.59375, -3.3410645, 49.59375, -11.109253, 46.809082, -14.216431, 42.632324, -17.323608, -14.449341)
+
+[node name="buttonSim" type="Polygon2D" parent="CanvasLayer/Botões Sim_Não/AnimatedSprite2D" unique_id=1870040271]
+modulate = Color(0.039215688, 0.0627451, 0.039215688, 0.84705883)
+position = Vector2(-38.889645, -112.771286)
+scale = Vector2(-1.002916, 1)
+polygon = PackedVector2Array(-10.875366, -22.275635, 7.7677, -23.667847, 271.0382, -22.275635, 275.68542, -19.491089, 281.8817, -18.098877, 360.88452, 41.767212, 362.4336, 45.94397, 357.78638, 48.728394, 12.428467, 48.728394, -0.00024414063, 47.33618, -6.2145996, 41.767212, -17.089722, -15.314453)
+
 [node name="Sim Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=275508638]
-visible = false
 modulate = Color(0.25882354, 0.45882353, 0, 0.9490196)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 27.125
-anchor_top = 32.0
+anchor_top = 31.575
 anchor_right = 28.55
 anchor_bottom = 31.575
 offset_left = -97.0
@@ -94,12 +104,11 @@ pivot_offset = Vector2(97, 68)
 metadata/_edit_use_anchors_ = true
 
 [node name="Não Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=714616353]
-visible = false
 modulate = Color(0.9738712, 0.0063262577, 0.16220829, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 34.112003
-anchor_top = 31.95
+anchor_top = 31.625
 anchor_right = 35.487003
 anchor_bottom = 31.625
 offset_left = -95.4801
