@@ -11,11 +11,25 @@ func _ready() -> void:
 	
 	
 func _on_sim_button_pressed() -> void:
-	bola.atual_sim -= 1
-	bola.texto_atual()
+	if bola.atual_sim > 0:
+		bola.atual_sim -= 1
+		bola.texto_atual()
+	else: esgotado($"Sim Button")
+
 	pass # Replace with function body.
 
 func _on_não_button_pressed() -> void:
-	bola.atual_nao -= 1
-	bola.texto_atual()
+	if bola.atual_nao > 0:
+		bola.atual_nao -= 1
+		bola.texto_atual()
+	else: esgotado($"Não Button")
+	
 	pass # Replace with function body.
+
+func esgotado(botaoIn: Control) -> void:
+	var tween = create_tween()
+	tween.tween_property(botaoIn, "rotation", botaoIn.rotation + deg_to_rad(12), 0.1)
+	tween.tween_property(botaoIn, "rotation", botaoIn.rotation + deg_to_rad(-12), 0.1)
+	tween.tween_property(botaoIn, "rotation", botaoIn.rotation + deg_to_rad(12), 0.1)
+	tween.tween_property(botaoIn, "rotation", botaoIn.rotation + deg_to_rad(-12), 0.1)
+	tween.tween_property(botaoIn, "rotation", botaoIn.rotation + deg_to_rad(0), 0.1)
