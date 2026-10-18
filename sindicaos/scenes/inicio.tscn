@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://cqyk5gh0ovf1"]
 
 [ext_resource type="Script" uid="uid://d4i54f7uup80x" path="res://scripts/inicio.gd" id="1_i3824"]
-[ext_resource type="Texture2D" uid="uid://dsjin2541dyo2" path="res://Assets/2D Assets/Esboco_1.png" id="2_4vxdk"]
+[ext_resource type="Texture2D" uid="uid://baskiee5thsg0" path="res://Assets/2D Assets/background/startscreen2.png" id="2_rfvtk"]
+[ext_resource type="Texture2D" uid="uid://i3wayx1lohfm" path="res://Assets/UI/PLAY.png" id="3_oc22k"]
 [ext_resource type="AudioStream" uid="uid://ds47cmtvrg7y7" path="res://Assets/Som/MúsicaJogo.mp3" id="3_q3pj3"]
+[ext_resource type="Texture2D" uid="uid://8w6bds0q2bq5" path="res://Assets/2D Assets/background/degrade.png" id="3_y25s7"]
+[ext_resource type="Texture2D" uid="uid://deiwpvomciajo" path="res://Assets/UI/CREDITO.png" id="4_4xtsl"]
+[ext_resource type="Texture2D" uid="uid://b0xth1ysa4x26" path="res://Assets/UI/ENG.png" id="5_ru1hr"]
+[ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="7_2fm8f"]
+[ext_resource type="Texture2D" uid="uid://bwwtt0jgaftdc" path="res://Assets/2D Assets/background/LOGO.png" id="9_rfvtk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_penyb"]
+blend_mode = 2
 
 [node name="MainMenu" type="Control" unique_id=1927412215]
 layout_mode = 3
@@ -30,48 +39,83 @@ offset_left = 2.0
 offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_4vxdk")
+texture = ExtResource("2_rfvtk")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=186029843]
-layout_mode = 1
+[node name="Degradê" type="Sprite2D" parent="TextureRect" unique_id=2076720807]
+material = SubResource("CanvasItemMaterial_penyb")
+position = Vector2(958, 537)
+texture = ExtResource("3_y25s7")
+
+[node name="PlayIcon" type="Sprite2D" parent="." unique_id=317418016]
+position = Vector2(374, 690)
+scale = Vector2(0.057408545, 0.057408545)
+texture = ExtResource("3_oc22k")
+
+[node name="Novo Jogo" type="Button" parent="PlayIcon" unique_id=6223930]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1654.8062
+offset_top = -1654.8057
+offset_right = 1654.8057
+offset_bottom = 1637.3867
+theme_override_font_sizes/font_size = 37
+
+[node name="Settings" type="Sprite2D" parent="." unique_id=498425434]
+position = Vector2(251, 862)
+scale = Vector2(0.029840613, 0.029840613)
+texture = ExtResource("5_ru1hr")
+
+[node name="Ajustes" type="Button" parent="Settings" unique_id=1941737567]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1654.8062
+offset_top = -1654.8057
+offset_right = 1654.8057
+offset_bottom = 1637.3867
+theme_override_font_sizes/font_size = 37
+
+[node name="CreditosButton" type="Sprite2D" parent="." unique_id=1243645479]
+position = Vector2(459.00003, 867)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_4xtsl")
+
+[node name="Créditos" type="Button" parent="CreditosButton" unique_id=2104977264]
+modulate = Color(1, 1, 1, 0)
+offset_left = -4066.668
+offset_top = -1600.0
+offset_right = 4099.999
+offset_bottom = 1633.334
+theme_override_font_sizes/font_size = 37
+
+[node name="CreditText" type="RichTextLabel" parent="CreditosButton" unique_id=1262851151]
+modulate = Color(0, 0, 0, 1)
+z_index = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = -80.5
-offset_right = 90.0
-offset_bottom = 80.5
+offset_left = -8281.168
+offset_top = -3259.834
+offset_right = -47.833984
+offset_bottom = -209.83984
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_group_ = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=239675612]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Novo Jogo" type="Button" parent="MarginContainer/VBoxContainer" unique_id=6223930]
-layout_mode = 2
-theme_override_font_sizes/font_size = 37
-text = "Novo jogo"
-
-[node name="Créditos" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2104977264]
-layout_mode = 2
-theme_override_font_sizes/font_size = 37
+theme_override_fonts/normal_font = ExtResource("7_2fm8f")
+theme_override_font_sizes/normal_font_size = 2000
 text = "Créditos"
-
-[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1660151950]
-layout_mode = 2
-theme_override_font_sizes/font_size = 37
-text = "Sair"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1384555833]
 stream = ExtResource("3_q3pj3")
 
-[connection signal="gui_input" from="MarginContainer/VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_gui_input"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Créditos" to="." method="_on_créditos_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[node name="Logo" type="Sprite2D" parent="." unique_id=1257928393]
+position = Vector2(357, 355.375)
+scale = Vector2(0.27078348, 0.27078348)
+texture = ExtResource("9_rfvtk")
+
+[connection signal="gui_input" from="PlayIcon/Novo Jogo" to="." method="_on_novo_jogo_gui_input"]
+[connection signal="pressed" from="PlayIcon/Novo Jogo" to="." method="_on_novo_jogo_pressed"]
+[connection signal="gui_input" from="Settings/Ajustes" to="." method="_on_novo_jogo_gui_input"]
+[connection signal="pressed" from="Settings/Ajustes" to="." method="_on_novo_jogo_pressed"]
+[connection signal="pressed" from="CreditosButton/Créditos" to="." method="_on_créditos_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
