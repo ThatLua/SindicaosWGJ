@@ -1,7 +1,7 @@
 extends Control
 
 @onready var fade_rect: ColorRect = $CanvasLayer/ColorRect
-var cena_explicacao_jogo = "res://scenes/game.tscn"
+var cena_explicacao_jogo = "res://scenes/cena_explicacoes.tscn"
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_novo_jogo_pressed() -> void:
 	var tween = create_tween()
-	tween.tween_property(fade_rect, "modulate:a", 1.0, 2)
+	tween.tween_property(fade_rect, "modulate:a", 1.0, 1)
 	await tween.finished
 	get_tree().change_scene_to_file(cena_explicacao_jogo)
 	print("novo jogo")

@@ -10,6 +10,12 @@ bg_color = Color(0.654902, 0.5803922, 0.5686275, 0)
 [node name="CenaExplicacoes" type="Node2D" unique_id=1575560573]
 script = ExtResource("1_hnjyu")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1292508713]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1481614922]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Superfície" type="Sprite2D" parent="." unique_id=167766001]
 texture = ExtResource("1_v2760")
 
@@ -19,9 +25,9 @@ texture = ExtResource("3_kjweg")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Papel" unique_id=52127974]
 offset_left = -1395.0
-offset_top = -1685.0
+offset_top = -1700.0
 offset_right = 1355.0
-offset_bottom = 1315.0
+offset_bottom = 1300.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 180
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur mattis purus vehicula suscipit. Etiam varius metus vel pulvinar imperdiet. Sed hendrerit nec nunc sed molestie. Cras nec lorem diam. Nullam rutrum tellus eu lacus efficitur, id finibus mi tincidunt."
@@ -44,3 +50,5 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 140
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjweg")
 text = "Prosseguir"
+
+[connection signal="pressed" from="Papel/Button" to="." method="_on_button_pressed"]

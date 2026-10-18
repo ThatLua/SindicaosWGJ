@@ -2,14 +2,11 @@
 
 [ext_resource type="Script" uid="uid://d4i54f7uup80x" path="res://scripts/inicio.gd" id="1_i3824"]
 
-[sub_resource type="Gradient" id="Gradient_jgil5"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_i3824"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kramq"]
-gradient = SubResource("Gradient_jgil5")
-width = 1152
-height = 648
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xg841"]
+gradient = SubResource("Gradient_i3824")
 
 [node name="MainMenu" type="Control" unique_id=1927412215]
 layout_mode = 3
@@ -25,6 +22,7 @@ script = ExtResource("1_i3824")
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=841227395]
 offset_right = 40.0
 offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=554660208]
 layout_mode = 1
@@ -33,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_kramq")
+texture = SubResource("GradientTexture2D_xg841")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=186029843]
 layout_mode = 1
