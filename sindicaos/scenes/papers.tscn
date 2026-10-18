@@ -17,14 +17,15 @@ texture = ExtResource("1_lup26")
 
 [node name="Organizacao" type="RichTextLabel" parent="Sprite2D" unique_id=1612512166]
 offset_left = -580.0
-offset_top = -1770.0
+offset_top = -1890.0
 offset_right = 1420.0
-offset_bottom = -1470.0
+offset_bottom = -1590.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_er8xk")
 theme_override_font_sizes/normal_font_size = 180
 text = "Lorem Ipsum
 "
+fit_content = true
 
 [node name="Representante" type="RichTextLabel" parent="Sprite2D" unique_id=1024032398]
 offset_left = -570.0
