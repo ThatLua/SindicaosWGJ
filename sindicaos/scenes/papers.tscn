@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bhpvxxrdnb2um" path="res://Assets/2D Assets/Papers/Carta vampiro.png" id="1_lup26"]
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="3_er8xk"]
 [ext_resource type="FontFile" uid="uid://br2l4rfoug72h" path="res://fonts/PROPOSTAS KumarOne-Regular.ttf" id="4_a8l3r"]
+[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://Assets/Fontes/Fondamento-Regular.ttf" id="4_gte00"]
 [ext_resource type="Texture2D" uid="uid://ci1o18u0jxyxd" path="res://Assets/3D assets/carimbo/OK.png" id="5_ads4f"]
 [ext_resource type="Texture2D" uid="uid://coqopbgby0b0n" path="res://Assets/3D assets/Carimbo Frames/0003.png" id="5_ma6e8"]
 [ext_resource type="Texture2D" uid="uid://df3ltcqmypuv2" path="res://Assets/3D assets/carimbo/X.png" id="6_gte00"]
@@ -180,8 +181,8 @@ offset_top = -1460.0
 offset_right = 1430.0
 offset_bottom = -1160.0
 theme_override_colors/default_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
-theme_override_fonts/normal_font = ExtResource("3_er8xk")
-theme_override_font_sizes/normal_font_size = 130
+theme_override_fonts/normal_font = ExtResource("4_gte00")
+theme_override_font_sizes/normal_font_size = 115
 text = "Lorem Ipsum
 "
 
@@ -191,7 +192,7 @@ offset_top = -1040.0
 offset_right = 1450.0
 offset_bottom = -740.0
 theme_override_colors/default_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
-theme_override_fonts/normal_font = ExtResource("3_er8xk")
+theme_override_fonts/normal_font = ExtResource("4_gte00")
 theme_override_font_sizes/normal_font_size = 100
 text = "Lorem Ipsum
 "
