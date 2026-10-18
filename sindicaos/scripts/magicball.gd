@@ -6,14 +6,25 @@ var num_nao = 0
 var sorteio_realizado
 var atual_sim
 var atual_nao
+var DeusaVisivel
+var BolaVisivel
 
 func _ready() -> void:
+	DeusaVisivel = false
+	BolaVisivel = false
 	sorteio_realizado = false
 	$Control/RichTextLabel.text = str("")
 	$Control/RichTextLabel2.text = str("")
 	
+
+func startSorteio():
+	mostrarDeusa()
+	await get_tree().create_timer(1.5).timeout
+	mostrarBola()
+	await get_tree().create_timer(1.0).timeout
+	sorteio_diario()
+
 func sorteio_diario():
-	
 	if sorteio_realizado == false: 
 		sorteio = [0,1,2,3].pick_random()
 		num_nao = 1 + sorteio
@@ -54,3 +65,9 @@ func shake_8ball ():
 func texto_atual() -> void:
 	$Control/RichTextLabel.text = str("sim ", atual_sim)
 	$Control/RichTextLabel2.text = str("não ", atual_nao)
+	
+func mostrarDeusa():
+	pass
+	
+func mostrarBola():
+	pass

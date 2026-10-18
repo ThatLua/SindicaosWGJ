@@ -4,8 +4,49 @@
 [ext_resource type="PackedScene" uid="uid://c4cvury310mbg" path="res://scenes/mesa.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bi0ba8rx16mek" path="res://scenes/8_ball.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://btfjkg8lo7nx6" path="res://scenes/rascunho.png" id="4_iywne"]
-[ext_resource type="Texture2D" uid="uid://ctc3b1p01bkn3" path="res://icon.svg" id="5_p57ef"]
 [ext_resource type="Script" uid="uid://d1mxbjks1gr8l" path="res://scenes/buttonYN.gd" id="5_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://b80bceq0a52nk" path="res://Assets/buttons/0001.png" id="6_gee14"]
+[ext_resource type="Texture2D" uid="uid://dcju3rdcx0js8" path="res://Assets/buttons/0003.png" id="7_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://d3a8x3r040qq" path="res://Assets/buttons/0002.png" id="8_vtaks"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_penyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gee14")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gee14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0tnpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gee14")
+}],
+"loop": 1,
+"name": &"press_nao",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gee14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vtaks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gee14")
+}],
+"loop": 1,
+"name": &"press_sim",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D" unique_id=1557244102]
 script = ExtResource("1_uwrxv")
@@ -32,6 +73,7 @@ scale = Vector2(1.8723824, 1.8723823)
 texture = ExtResource("4_iywne")
 
 [node name="Botões Sim_Não" type="Control" parent="CanvasLayer" unique_id=622961122]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -315.0
@@ -41,14 +83,20 @@ offset_bottom = -337.0
 script = ExtResource("5_u5sy4")
 metadata/_edit_use_anchors_ = true
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Botões Sim_Não" unique_id=968782927]
+position = Vector2(948.00006, 999)
+scale = Vector2(0.44806984, 0.5)
+sprite_frames = SubResource("SpriteFrames_penyb")
+frame_progress = 0.86559147
+
 [node name="Sim Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=275508638]
-modulate = Color(0.29072705, 0.74153024, 0, 1)
+modulate = Color(0.26061666, 0.4581141, 0, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 20.95
-anchor_top = 25.500002
-anchor_right = 20.95
-anchor_bottom = 25.500002
+anchor_left = 21.1
+anchor_top = 23.650002
+anchor_right = 21.1
+anchor_bottom = 23.650002
 offset_left = -97.0
 offset_top = -68.00006
 offset_right = 97.0
@@ -56,17 +104,16 @@ offset_bottom = 67.99994
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(97, 68)
-icon = ExtResource("5_p57ef")
 metadata/_edit_use_anchors_ = true
 
 [node name="Não Button" type="Button" parent="CanvasLayer/Botões Sim_Não" unique_id=714616353]
 modulate = Color(0.9738712, 0.0063262577, 0.16220829, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 26.462002
-anchor_top = 25.575
-anchor_right = 26.462002
-anchor_bottom = 25.575
+anchor_left = 25.862003
+anchor_top = 23.625
+anchor_right = 25.862003
+anchor_bottom = 23.625
 offset_left = -95.4801
 offset_top = -68.0
 offset_right = 98.5199
@@ -74,7 +121,6 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(97, 68)
-icon = ExtResource("5_p57ef")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/Botões Sim_Não/Sim Button" to="CanvasLayer/Botões Sim_Não" method="_on_sim_button_pressed"]
