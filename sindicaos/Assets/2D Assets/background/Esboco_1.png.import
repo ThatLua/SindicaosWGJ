@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btfjkg8lo7nx6"
-path="res://.godot/imported/rascunho.png-ea1dabe18be3cfb61b2a168e322c831f.ctex"
+uid="uid://dsjin2541dyo2"
+path="res://.godot/imported/Esboco_1.png-0e1c9dd4de31f85154b43e57ec3d600a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/rascunho.png"
-dest_files=["res://.godot/imported/rascunho.png-ea1dabe18be3cfb61b2a168e322c831f.ctex"]
+source_file="res://Assets/2D Assets/background/Esboco_1.png"
+dest_files=["res://.godot/imported/Esboco_1.png-0e1c9dd4de31f85154b43e57ec3d600a.ctex"]
 
 [params]
 

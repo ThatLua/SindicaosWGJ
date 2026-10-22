@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://umi2mo7peo24"]
 
-[ext_resource type="Script" uid="uid://dqfjl7dc7rqa5" path="res://scripts/GameManager.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://c4cvury310mbg" path="res://scenes/mesa.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bi0ba8rx16mek" path="res://scenes/8_ball.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://capisi3pnp7ty" path="res://scenes/papers.tscn" id="4_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://btfjkg8lo7nx6" path="res://scenes/rascunho.png" id="4_iywne"]
 [ext_resource type="Script" uid="uid://d1mxbjks1gr8l" path="res://scenes/buttonYN.gd" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://nw0l7cuffvdj" path="res://Assets/3D assets/buttons/Normal.png" id="6_gee14"]
 [ext_resource type="Texture2D" uid="uid://cx5yt2lj78oyl" path="res://Assets/3D assets/buttons/No.png" id="7_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://bby0xyv5vhogn" path="res://Assets/3D assets/buttons/Yes.png" id="8_vtaks"]
 [ext_resource type="Texture2D" uid="uid://b0xth1ysa4x26" path="res://Assets/UI/ENG.png" id="10_vtaks"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gee14"]
+load_path = "res://.godot/imported/rascunho.png-ea1dabe18be3cfb61b2a168e322c831f.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_penyb"]
 animations = [{
@@ -39,7 +40,6 @@ animations = [{
 }]
 
 [node name="Game" type="Node2D" unique_id=1557244102]
-script = ExtResource("1_uwrxv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=846889074]
 z_index = 10
@@ -59,7 +59,7 @@ position = Vector2(-380, 6)
 visible = false
 position = Vector2(971.49084, 538.375)
 scale = Vector2(2.8043196, 2.8043194)
-texture = ExtResource("4_iywne")
+texture = SubResource("CompressedTexture2D_gee14")
 
 [node name="Botões Sim_Não" type="Control" parent="CanvasLayer" unique_id=622961122]
 layout_mode = 3

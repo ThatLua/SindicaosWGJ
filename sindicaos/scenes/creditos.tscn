@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://caxodd5sd2a3u"]
 
-[ext_resource type="Script" uid="uid://tu3ts0y4xksj" path="res://scripts/creditos.gd" id="1_6yhot"]
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_6yhot"]
-[ext_resource type="FontFile" uid="uid://c60vg3873qf7c" path="res://fonts/Fondamento-Regular.ttf" id="3_jddgq"]
+[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://fonts/Fondamento-Regular.ttf" id="3_jddgq"]
 
 [sub_resource type="Gradient" id="Gradient_ul0vb"]
 colors = PackedColorArray(0.08627451, 0.19607843, 0.105882354, 1, 0.08627451, 0.19607843, 0.105882354, 1)
@@ -17,7 +16,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6yhot")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=99413856]
 layout_mode = 1

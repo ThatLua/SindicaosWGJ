@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dbdk0sdpryy31" path="res://scripts/relatorio.gd" id="1_i627k"]
 [ext_resource type="FontFile" uid="uid://blt04f4sttkds" path="res://fonts/UI E TITULOS Jacquard24-Regular.ttf" id="2_sh71o"]
 [ext_resource type="Texture2D" uid="uid://qmmdp31shyag" path="res://Assets/2D Assets/background/Background1.1.png" id="2_x7bp8"]
-[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://Assets/Fontes/Fondamento-Regular.ttf" id="5_i627k"]
-[ext_resource type="FontFile" uid="uid://bhd5bth0x6kee" path="res://Assets/Fontes/UI E TITULOS alagard.ttf" id="6_x7bp8"]
+[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://fonts/Fondamento-Regular.ttf" id="5_i627k"]
+[ext_resource type="FontFile" uid="uid://bhd5bth0x6kee" path="res://fonts/UI E TITULOS alagard.ttf" id="6_x7bp8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgte1"]
 bg_color = Color(0.654902, 0.5803922, 0.5686275, 0)

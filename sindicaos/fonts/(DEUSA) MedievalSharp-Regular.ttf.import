@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bdiiiu3atateq"
-path="res://.godot/imported/Fondamento-Regular.ttf-2d753123529e99ad8669c2dd73295531.fontdata"
+uid="uid://yu6doq2kyl7a"
+path="res://.godot/imported/(DEUSA) MedievalSharp-Regular.ttf-02e4bcf8cb98bb75bb949d2113056592.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fontes/Fondamento-Regular.ttf"
-dest_files=["res://.godot/imported/Fondamento-Regular.ttf-2d753123529e99ad8669c2dd73295531.fontdata"]
+source_file="res://fonts/(DEUSA) MedievalSharp-Regular.ttf"
+dest_files=["res://.godot/imported/(DEUSA) MedievalSharp-Regular.ttf-02e4bcf8cb98bb75bb949d2113056592.fontdata"]
 
 [params]
 

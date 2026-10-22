@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dinnqgd56723a" path="res://Assets/2D Assets/Deusa/deusa.png" id="4_qn50n"]
 [ext_resource type="Texture2D" uid="uid://kyjbw5iuxtqr" path="res://Assets/2D Assets/Deusa/luz.png" id="5_mmf6d"]
 [ext_resource type="Texture2D" uid="uid://bwrx6m8t4uws1" path="res://Assets/2D Assets/Deusa/balao.png" id="6_7ybv8"]
-[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://Assets/Fontes/Fondamento-Regular.ttf" id="7_jjqpl"]
+[ext_resource type="FontFile" uid="uid://bdiiiu3atateq" path="res://fonts/Fondamento-Regular.ttf" id="7_jjqpl"]
 [ext_resource type="Texture2D" uid="uid://cgr5ydbjibm1j" path="res://Assets/UI/BOTAO GENÉRICO.png" id="8_gu0ny"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_penyb"]

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b1fch058lwems"
-path="res://.godot/imported/PROPOSTAS KumarOne-Regular.ttf-22b7d00c8918343cce5017e372368936.fontdata"
+uid="uid://bhd5bth0x6kee"
+path="res://.godot/imported/UI E TITULOS alagard.ttf-2f8382041f8388f58f256e470c5c2d27.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fontes/PROPOSTAS KumarOne-Regular.ttf"
-dest_files=["res://.godot/imported/PROPOSTAS KumarOne-Regular.ttf-22b7d00c8918343cce5017e372368936.fontdata"]
+source_file="res://fonts/UI E TITULOS alagard.ttf"
+dest_files=["res://.godot/imported/UI E TITULOS alagard.ttf-2f8382041f8388f58f256e470c5c2d27.fontdata"]
 
 [params]
 
